@@ -5,21 +5,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>100 Horas de Astronomía</title>
-    <link rel="shortcut icon" type="image/png" href="Logo numero 6-1, lente plano convexo.png">
-    <link rel="stylesheet" href="Inicio.css">
-    <!-- Three.js CDN -->
+    <link rel="shortcut icon" type="image/png" href="assets/img/logos/100-horas-astronomia.png">
+    <link rel="stylesheet" href="assets/css/estilos.css">
+    <!-- Three.js (CDN) — necesario para el preámbulo 3D -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 </head>
 
 <body>
 
-    <!-- Preámbulo Cinemático (Sol + Planetas + Tarjeta emergente) -->
+    <!-- =========================================================
+         1. PREÁMBULO CINEMÁTICO (Sol + planetas + tarjeta)
+         ========================================================= -->
     <div id="intro-screen">
         <div id="sun-canvas-container"></div>
-        
+
         <!-- Tarjeta que aparece tras la revelación -->
         <div class="intro-content hidden-content" id="intro-card">
-        <!--img src="Logo numero 6-2, lente plano convexo.png" alt="CEIC Logo" class="intro-logo"-->
             <h1 class="intro-title">100 Horas de Astronomía</h1>
             <p class="intro-date">1 al 4 de Octubre 2026</p>
             <p class="intro-subtitle">Una Nueva Perspectiva de Nuestro Sistema Solar</p>
@@ -27,12 +28,17 @@
         </div>
     </div>
 
-    <!-- Contenido Principal -->
+
+    <!-- =========================================================
+         CONTENIDO PRINCIPAL
+         ========================================================= -->
     <div class="glass-container">
-        
+
+        <!-- ------------------ 2. ENCABEZADO ------------------ -->
         <header class="bento-card header-card">
             <div class="logo-wrapper">
-                <img src="Captura de pantalla 2026-09-19 023533.png" alt="Universidad de Panama" class="mi-imagen">
+                <img src="assets/img/logos/100-horas-astronomia.png"
+                     alt="100 Horas de Astronomía" class="mi-imagen">
             </div>
             <div class="header-text">
                 <h1>100 Horas de Astronomía</h1>
@@ -40,9 +46,12 @@
             </div>
         </header>
 
+
+        <!-- ------------------ 3. NAVEGACIÓN ------------------ -->
+        <!-- NOTA: las páginas enlazadas aún no existen en el repo. -->
         <nav class="bento-card nav-card">
             <ul class="menu">
-                <li><a href="Paginadeinicio.html" class="active">Inicio</a></li>
+                <li><a href="index.html" class="active">Inicio</a></li>
                 <li><a href="Quiénes Somos.html">Evento</a></li>
                 <li><a href="Inscripciones.html">Programa</a></li>
                 <li><a href="proyectos.html">Conferencias e Invitados</a></li>
@@ -52,80 +61,102 @@
             </ul>
         </nav>
 
-        <!-- Bento Grid Principal -->
-        <section class="bento-grid content-section">
+
+        <!-- ------------------ 4. SOBRE EL EVENTO ------------------ -->
+        <section id="sobre-el-evento" class="bento-grid content-section">
             <article class="bento-card feature-card">
                 <h2>100 Horas de Astronomía</h2>
-                <p> Celebración mundial anual, creada por la Unión Astronómica Internacional (IAU),  organizada por la Oficina de Extensión Astronómica (OAO) que invita a personas de todas las edades y orígenes a reunirse y conectarse con el cielo nocturno y con la ciencia que nos ayuda a comprenderlo.</p>
+                <p>Celebración mundial anual, creada por la Unión Astronómica Internacional (IAU), organizada por
+                    la Oficina de Extensión Astronómica (OAO) que invita a personas de todas las edades y orígenes
+                    a reunirse y conectarse con el cielo nocturno y con la ciencia que nos ayuda a comprenderlo.</p>
             </article>
 
             <article class="bento-card feature-card">
                 <h2>Universidad de Panamá</h2>
-                <p>Este año la Universidad de Panamá, reafirma el interés por la divulgación científica, al participar por segundo año consecutivo en las 100 horas de astronomía, tratando de acercar a las personas al ámbito científico, sin hacerlo tan complejo. </p>
+                <p>Este año la Universidad de Panamá reafirma el interés por la divulgación científica, al participar
+                    por segundo año consecutivo en las 100 Horas de Astronomía, tratando de acercar a las personas
+                    al ámbito científico sin hacerlo tan complejo.</p>
             </article>
 
             <article class="bento-card feature-card">
                 <h2>Una Nueva Perspectiva de Nuestro Sistema Solar</h2>
-                <p>Reavivando la idea de que el conocimiento no es estático, sino un proceso en constante evolución donde cada nuevo descubrimiento induce a una nueva concepción de lo que conocemos actualmente como nuestro sistema solar.</p>   
+                <p>Reavivando la idea de que el conocimiento no es estático, sino un proceso en constante evolución
+                    donde cada nuevo descubrimiento induce a una nueva concepción de lo que conocemos actualmente
+                    como nuestro sistema solar.</p>
             </article>
         </section>
 
-        <!-- Contacto -->
-        <!-- SECCIÓN 1: PÓSTER CENTRADO AMPLIFIABLE -->
-<section class="bento-grid single-card-section">
-    <div class="bento-card poster-card">
-        <h3>Póster Oficial</h3>
-        <p class="poster-subtitle">Toca la imagen para ampliar</p>
-        <div class="poster-wrapper" onclick="togglePosterModal()">
-            <img src="WhatsApp Image 2026-09-19 at 01.51.42.jpeg" alt="Póster del Evento" class="poster-img" id="poster-thumb">
-        </div>
+
+        <!-- ------------------ 5. PÓSTER OFICIAL ------------------ -->
+        <section id="poster" class="bento-grid single-card-section">
+            <div class="bento-card poster-card">
+                <h3>Póster Oficial</h3>
+                <p class="poster-subtitle">Toca la imagen para ampliar</p>
+                <div class="poster-wrapper" onclick="togglePosterModal()">
+                    <img src="assets/img/poster/poster-evento.jpeg"
+                         alt="Póster del Evento" class="poster-img" id="poster-thumb">
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ------------------ 6. INSCRIPCIÓN Y QR ------------------ -->
+        <section id="inscripcion" class="bento-grid registration-section">
+            <div class="bento-card registration-card">
+                <div class="qr-container">
+                    <img src="assets/img/qr/qr-inscripcion.jpg"
+                         alt="Código QR para inscripción" class="qr-img">
+                </div>
+                <div class="registration-info">
+                    <h3>Inscripción al Evento</h3>
+                    <p>Escanea el código QR o haz clic en el siguiente botón para completar tu formulario de registro.</p>
+                    <a href="https://tu-link-de-registro.com" target="_blank" class="register-btn">
+                        Registrarme Ahora
+                    </a>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ------------------ 7. ORGANIZAN Y PATROCINAN ------------------ -->
+        <footer id="organizan" class="bento-card sponsors-section">
+            <p class="sponsors-title">Organizan y Patrocinan</p>
+            <div class="sponsors-grid">
+                <img src="assets/img/logos/universidad-panama.png"
+                     alt="Universidad de Panamá" class="sponsor-logo">
+                <img src="assets/img/logos/departamento-fisica.png"
+                     alt="Departamento de Física — FCNET" class="sponsor-logo">
+                <img src="assets/img/logos/fcnet.png"
+                     alt="Facultad de Ciencias Naturales, Exactas y Tecnología" class="sponsor-logo">
+                <img src="assets/img/logos/apaa.png"
+                     alt="Asociación Panameña de Aficionados a la Astronomía" class="sponsor-logo">
+                <img src="assets/img/logos/astronomia-astrofisica.png"
+                     alt="Astronomía y Astrofísica — Universidad de Panamá" class="sponsor-logo">
+                <img src="assets/img/logos/100-horas-astronomia.png"
+                     alt="100 Hours of Astronomy" class="sponsor-logo is-light">
+            </div>
+            <p class="copyright-text">© 2026 - 100 Horas de Astronomía. Todos los derechos reservados.</p>
+        </footer>
+
     </div>
-</section>
 
-<!-- SECCIÓN 2: INSCRIPCIÓN Y CÓDIGO QR -->
-<section class="bento-grid registration-section">
-    <div class="bento-card registration-card">
-        <div class="qr-container">
-            <img src="randomqr.jpg" alt="Código QR para inscripción" class="qr-img">
-        </div>
-        <div class="registration-info">
-            <h3>Inscripción al Evento</h3>
-            <p>Escanea el código QR o haz clic en el siguiente botón para completar tu formulario de registro.</p>
-            <a href="https://tu-link-de-registro.com" target="_blank" class="register-btn">
-                Registrarme Ahora
-            </a>
-        </div>
-    </div>
-</section>
 
-<!-- MODAL PARA VER EL PÓSTER EN TAMAÑO COMPLETO -->
-<div id="poster-modal" class="poster-modal" onclick="togglePosterModal()">
-    <span class="close-modal">&times;</span>
-    <img src="WhatsApp Image 2026-09-19 at 01.51.42.jpeg" alt="Póster en tamaño completo" class="modal-content">
-</div>
-
-       <!-- SECCIÓN DE INSTITUCIONES Y ORGANIZADORES -->
-<footer class="bento-card sponsors-section">
-    <p class="sponsors-title">Organizan y Patrocinan</p>
-    <div class="sponsors-grid">
-        <img src="up.jpg" alt="Universidad de Panamá" class="sponsor-logo">
-        <img src="Escuela de F[isica.jpeg" alt="Institución 2" class="sponsor-logo">
-        <img src="Facultad.jpeg" alt="Institución 3" class="sponsor-logo">
-        <img src="APAA.jpeg" alt="OAE" class="sponsor-logo">
-        <img src="Astronomiyastrofi.jpeg" alt="IAU" class="sponsor-logo">
-        <!--img src="logo6.png" alt="Institución 6" class="sponsor-logo"-->
-        
-        <!--img src="logo7.png" alt="Institución 7" class="sponsor-logo"-->
-        <img src="Captura de pantalla 2026-09-19 023533.png" alt="100 Hours of Astronomy" class="sponsor-logo">
-    </div>
-    <p class="copyright-text">© 2026 - 100 Horas de Astronomía. Todos los derechos reservados.</p>
-</footer>
-
+    <!-- =========================================================
+         MODAL: PÓSTER EN TAMAÑO COMPLETO
+         ========================================================= -->
+    <div id="poster-modal" class="poster-modal" onclick="togglePosterModal()">
+        <span class="close-modal">&times;</span>
+        <img src="assets/img/poster/poster-evento.jpeg"
+             alt="Póster en tamaño completo" class="modal-content">
     </div>
 
-    <script src="space-intro.js"></script>
-    <script src="Inicio.js"></script>
-    
+
+    <!-- =========================================================
+         SCRIPTS
+         ========================================================= -->
+    <script src="assets/js/intro-3d.js"></script>
+    <script src="assets/js/main.js"></script>
+
 </body>
 
 </html>

@@ -1,17 +1,27 @@
-// router.js — Control de la intro y liberación del scroll
+
+
+// 1. Ocultar la intro de inmediato si ya fue vista (antes de renderizar la página)
 (function () {
   const hasSeenIntro = sessionStorage.getItem('hasSeenIntro');
 
   if (hasSeenIntro === 'true') {
-    // Si ya vio la intro, desbloqueamos el scroll de una vez antes de pintar la pantalla
+    // Agrega una clase global para ocultar la intro por CSS si la tienes configurada
     document.documentElement.classList.add('skip-intro');
+
+    // Al cargar el DOM, oculta los contenedores 3D/Intro
     document.addEventListener('DOMContentLoaded', () => {
+      const introScreen = document.getElementById('intro-screen');
+      const sunContainer = document.getElementById('sun-canvas-container');
+
+      if (introScreen) introScreen.style.display = 'none';
+      if (sunContainer) sunContainer.style.display = 'none';
+
       liberarScroll();
     });
   }
 })();
 
-// Función para restaurar el scroll
+// 2. Función para liberar el scroll de la página
 function liberarScroll() {
   document.body.classList.remove('no-scroll');
   document.documentElement.classList.remove('no-scroll');
@@ -21,15 +31,13 @@ function liberarScroll() {
   document.documentElement.style.overflowY = 'auto';
 }
 
-// Función que ejecuta el botón de ingresar
+// 3. Función ejecutada cuando el usuario presiona el botón "Ingresar"
 function marcarIntroVista() {
-  // 1. Guardar en memoria
   sessionStorage.setItem('hasSeenIntro', 'true');
-  
-  // 2. Ocultar los elementos de la intro
+
   const introScreen = document.getElementById('intro-screen');
   const sunContainer = document.getElementById('sun-canvas-container');
-  
+
   if (introScreen) {
     introScreen.style.opacity = '0';
     introScreen.style.pointerEvents = 'none';
@@ -42,11 +50,13 @@ function marcarIntroVista() {
     sunContainer.style.display = 'none';
   }
 
-  // 3. Forzar liberación del scroll
   liberarScroll();
 
-  // 4. Compatibilidad con tu función previa
-  if (typeof enterSite === 'function') {
-    enterSite();
+  if (typeof window.enterSite === 'function') {
+    window.enterSite();
   }
 }
+
+// Hacer las funciones accesibles globalmente
+window.liberarScroll = liberarScroll;
+window.marcarIntroVista = marcarIntroVista;

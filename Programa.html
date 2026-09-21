@@ -1,0 +1,953 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>100 Horas de Astronomía - Programa</title>
+  
+  <link rel="shortcut icon" type="image/png" href="Logo numero 6-1, lente plano convexo.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="programa.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+</head>
+<body>
+
+  <!-- NAVEGACIÓN FLOTANTE -->
+  <header class="glass-navigation">
+    <nav class="bento-card nav-card">
+      <ul class="menu">
+        <li><a href="Inicio.html">Inicio</a></li>
+        <li><a href="Evento.html">Evento</a></li>
+        <li><a href="Programa.html" class="active">Programa</a></li>
+        <li><a href="Conferencia.html">Conferencias e Invitados</a></li>
+        <li><a href="Actividades.html">Actividades</a></li>
+        <li><a href="#">Organización</a></li>
+        <li><a href="#">Servicio Social</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- CONTENEDOR PRINCIPAL PROGRAMA -->
+  <main class="program-wrapper">
+
+    <!-- SELECTOR INTERACTIVO DE ESFERAS (INSPIRADO EN EL LOGO) -->
+    <section class="spheres-menu-container">
+      <h1 class="program-title">Programa Oficial</h1>
+      <p class="program-subtitle">Selecciona un día para desplegar la agenda de actividades</p>
+      
+      <div class="spheres-group">
+        <div class="sphere sphere-1 active" data-day="day1">
+          <div class="sphere-content">
+            <span class="day-num">01</span>
+            <span class="day-month">OCT</span>
+          </div>
+        </div>
+
+        <div class="sphere sphere-2" data-day="day2">
+          <div class="sphere-content">
+            <span class="day-num">02</span>
+            <span class="day-month">OCT</span>
+          </div>
+        </div>
+
+        <div class="sphere sphere-3" data-day="day3">
+          <div class="sphere-content">
+            <span class="day-num">03</span>
+            <span class="day-month">OCT</span>
+          </div>
+        </div>
+
+        <div class="sphere sphere-4" data-day="day4">
+          <div class="sphere-content">
+            <span class="day-num">04</span>
+            <span class="day-month">OCT</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PANELES DE TABLAS DE PROGRAMA POR DÍA -->
+    <section class="program-tables-container">
+
+      <!-- DÍA 1: 1 DE OCTUBRE -->
+      <article class="bento-card program-day-panel active" id="day1">
+        <div class="day-header">
+          <h2>Jueves, 1 de Octubre</h2>
+          <span class="badge">Día 1 - Inauguración</span>
+        </div>
+
+        <div class="table-responsive">
+          <table class="program-table">
+            <thead>
+              <tr>
+                <th>Expositor / Ponente</th>
+                <th>Detalles de la Conferencia</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- Acto Inaugural -->
+<!-- Acto Inaugural -->
+<!-- Acto Inaugural -->
+<tr>
+  <td class="speaker-cell">
+    <img src="up.jpg" alt="Acto Inaugural" class="speaker-img zoomable-img">
+    <div class="speaker-info">
+      <h3>Autoridades e Invitados</h3>
+      <p>Evento Apertura</p>
+    </div>
+  </td>
+  <td class="details-cell">
+    <div class="detail-badge"><i class="far fa-clock"></i> 9:30 a.m. – 9:55 a.m.</div>
+    <div class="detail-badge"><i class="far fa-calendar"></i> Jueves 01 de Octubre</div>
+    <div class="detail-badge modality-badge"><i class="fas fa-building"></i> Auditorio Bernardo Lombardo</div>
+    <h4 class="talk-title">Acto Inaugural de 100 H de Astronomía</h4>
+
+    <button type="button" class="accordion-btn" onclick="toggleEvidence('evidencia-j1-1', this)">
+      <span><i class="fas fa-folder-open"></i> Evidencias de la Actividad</span>
+      <i class="fas fa-chevron-down arrow-icon"></i>
+    </button>
+
+    <div id="evidencia-j1-1" class="accordion-content">
+      <div class="evidence-box">
+        <h5><i class="fas fa-images"></i> Galería de Evidencias</h5>
+        <div class="evidence-grid">
+          <div class="evidence-item">
+            <img src="up.jpg" alt="Evidencia Acto Inaugural">
+            <span>Fotografía del evento</span>
+          </div>
+        </div>
+        <div class="evidence-links">
+          <a href="#" target="_blank" class="evidence-link"><i class="fas fa-file-pdf"></i> Programa (PDF)</a>
+        </div>
+      </div>
+    </div>
+  </td>
+</tr>
+
+<!-- Conferencia 1 -->
+<tr>
+  <td class="speaker-cell">
+    <img src="up.jpg" alt="Mgtr. Luis Marín" class="speaker-img zoomable-img">
+    <div class="speaker-info">
+      <h3>Mgtr. Luis Marín</h3>
+      <p>Conferencista Invitado</p>
+    </div>
+  </td>
+  <td class="details-cell">
+    <div class="detail-badge"><i class="far fa-clock"></i> 10:00 a.m. – 10:25 a.m.</div>
+    <div class="detail-badge"><i class="far fa-calendar"></i> Jueves 01 de Octubre</div>
+    <div class="detail-badge modality-badge"><i class="fas fa-building"></i> Auditorio Bernardo Lombardo</div>
+    <h4 class="talk-title">Conferencia Magistral</h4>
+
+    <button type="button" class="accordion-btn" onclick="toggleEvidence('evidencia-j1-2', this)">
+      <span><i class="fas fa-folder-open"></i> Evidencias de la Actividad</span>
+      <i class="fas fa-chevron-down arrow-icon"></i>
+    </button>
+
+    <div id="evidencia-j1-2" class="accordion-content">
+      <div class="evidence-box">
+        <h5><i class="fas fa-images"></i> Galería de Evidencias</h5>
+        <div class="evidence-grid">
+          <div class="evidence-item">
+            <img src="up.jpg" alt="Evidencia Luis Marín">
+            <span>Sesión en vivo</span>
+          </div>
+        </div>
+        <div class="evidence-links">
+          <a href="#" target="_blank" class="evidence-link"><i class="fas fa-file-pdf"></i> Presentación (PDF)</a>
+        </div>
+      </div>
+    </div>
+  </td>
+</tr>
+
+<!-- Conferencia 2 -->
+<tr>
+  <td class="speaker-cell">
+    <img src="up.jpg" alt="Licda. Reina Rodríguez" class="speaker-img zoomable-img">
+    <div class="speaker-info">
+      <h3>Licenciada Reina Rodríguez</h3>
+      <p>Conferencista Invitada</p>
+    </div>
+  </td>
+  <td class="details-cell">
+    <div class="detail-badge"><i class="far fa-clock"></i> 10:30 a.m. – 10:55 a.m.</div>
+    <div class="detail-badge"><i class="far fa-calendar"></i> Jueves 01 de Octubre</div>
+    <div class="detail-badge modality-badge"><i class="fas fa-building"></i> Auditorio Bernardo Lombardo</div>
+    <h4 class="talk-title">Conferencia Magistral</h4>
+
+    <button type="button" class="accordion-btn" onclick="toggleEvidence('evidencia-j1-3', this)">
+      <span><i class="fas fa-folder-open"></i> Evidencias de la Actividad</span>
+      <i class="fas fa-chevron-down arrow-icon"></i>
+    </button>
+
+    <div id="evidencia-j1-3" class="accordion-content">
+      <div class="evidence-box">
+        <h5><i class="fas fa-images"></i> Galería de Evidencias</h5>
+        <div class="evidence-grid">
+          <div class="evidence-item">
+            <img src="up.jpg" alt="Evidencia Reina Rodríguez">
+            <span>Sesión en vivo</span>
+          </div>
+        </div>
+        <div class="evidence-links">
+          <a href="#" target="_blank" class="evidence-link"><i class="fas fa-file-pdf"></i> Presentación (PDF)</a>
+        </div>
+      </div>
+    </div>
+  </td>
+</tr>
+
+<!-- Receso 1 -->
+<tr style="background: rgba(14, 165, 233, 0.08);">
+  <td colspan="2" style="text-align: center; font-weight: bold; color: #0284c7; padding: 10px;">
+    <i class="fas fa-coffee"></i> 11:00 a.m. – 11:25 a.m. — RECESO
+  </td>
+</tr>
+
+<!-- Conferencia 3 -->
+<tr>
+  <td class="speaker-cell">
+    <img src="up.jpg" alt="Dr. Pablo Martín Weigandt" class="speaker-img zoomable-img">
+    <div class="speaker-info">
+      <h3>Dr. Pablo Martín Weigandt Beckmann</h3>
+      <p>Conferencista Invitado</p>
+    </div>
+  </td>
+  <td class="details-cell">
+    <div class="detail-badge"><i class="far fa-clock"></i> 11:30 a.m. – 11:55 a.m.</div>
+    <div class="detail-badge"><i class="far fa-calendar"></i> Jueves 01 de Octubre</div>
+    <div class="detail-badge modality-badge"><i class="fas fa-building"></i> Auditorio Bernardo Lombardo</div>
+    <h4 class="talk-title">OAB: tu ventana al cosmos</h4>
+
+    <button type="button" class="accordion-btn" onclick="toggleEvidence('evidencia-j1-4', this)">
+      <span><i class="fas fa-folder-open"></i> Evidencias de la Actividad</span>
+      <i class="fas fa-chevron-down arrow-icon"></i>
+    </button>
+
+    <div id="evidencia-j1-4" class="accordion-content">
+      <div class="evidence-box">
+        <h5><i class="fas fa-images"></i> Galería de Evidencias</h5>
+        <div class="evidence-grid">
+          <div class="evidence-item">
+            <img src="up.jpg" alt="Evidencia Pablo Weigandt">
+            <span>Sesión en vivo</span>
+          </div>
+        </div>
+        <div class="evidence-links">
+          <a href="#" target="_blank" class="evidence-link"><i class="fas fa-file-pdf"></i> Presentación (PDF)</a>
+        </div>
+      </div>
+    </div>
+  </td>
+</tr>
+
+<!-- Conferencia 4 -->
+<tr>
+  <td class="speaker-cell">
+    <img src="up.jpg" alt="Dr. Daniel Sega" class="speaker-img zoomable-img">
+    <div class="speaker-info">
+      <h3>Dr. Daniel Sega</h3>
+      <p>Conferencista Invitado</p>
+    </div>
+  </td>
+  <td class="details-cell">
+    <div class="detail-badge"><i class="far fa-clock"></i> 12:00 p.m. – 12:25 p.m.</div>
+    <div class="detail-badge"><i class="far fa-calendar"></i> Jueves 01 de Octubre</div>
+    <div class="detail-badge modality-badge"><i class="fas fa-building"></i> Auditorio Bernardo Lombardo</div>
+    <h4 class="talk-title">Conferencia Magistral</h4>
+
+    <button type="button" class="accordion-btn" onclick="toggleEvidence('evidencia-j1-5', this)">
+      <span><i class="fas fa-folder-open"></i> Evidencias de la Actividad</span>
+      <i class="fas fa-chevron-down arrow-icon"></i>
+    </button>
+
+    <div id="evidencia-j1-5" class="accordion-content">
+      <div class="evidence-box">
+        <h5><i class="fas fa-images"></i> Galería de Evidencias</h5>
+        <div class="evidence-grid">
+          <div class="evidence-item">
+            <img src="up.jpg" alt="Evidencia Daniel Sega">
+            <span>Sesión en vivo</span>
+          </div>
+        </div>
+        <div class="evidence-links">
+          <a href="#" target="_blank" class="evidence-link"><i class="fas fa-file-pdf"></i> Presentación (PDF)</a>
+        </div>
+      </div>
+    </div>
+  </td>
+</tr>
+
+<!-- Receso 2 -->
+<tr style="background: rgba(14, 165, 233, 0.08);">
+  <td colspan="2" style="text-align: center; font-weight: bold; color: #0284c7; padding: 10px;">
+    <i class="fas fa-coffee"></i> 12:25 p.m. – 1:00 p.m. — RECESO
+  </td>
+</tr>
+
+<!-- Conferencia 5 -->
+<tr>
+  <td class="speaker-cell">
+    <img src="up.jpg" alt="Expositor Por Confirmar" class="speaker-img zoomable-img">
+    <div class="speaker-info">
+      <h3>Por Confirmar</h3>
+      <p>Conferencista Invitado</p>
+    </div>
+  </td>
+  <td class="details-cell">
+    <div class="detail-badge"><i class="far fa-clock"></i> 1:00 p.m. – 1:25 p.m.</div>
+    <div class="detail-badge"><i class="far fa-calendar"></i> Jueves 01 de Octubre</div>
+    <div class="detail-badge modality-badge"><i class="fas fa-building"></i> Auditorio Bernardo Lombardo</div>
+    <h4 class="talk-title">Conferencia por definir</h4>
+
+    <button type="button" class="accordion-btn" onclick="toggleEvidence('evidencia-j1-6', this)">
+      <span><i class="fas fa-folder-open"></i> Evidencias de la Actividad</span>
+      <i class="fas fa-chevron-down arrow-icon"></i>
+    </button>
+
+    <div id="evidencia-j1-6" class="accordion-content">
+      <div class="evidence-box">
+        <h5><i class="fas fa-images"></i> Galería de Evidencias</h5>
+        <div class="evidence-grid">
+          <div class="evidence-item">
+            <img src="up.jpg" alt="Evidencia Por Confirmar">
+            <span>Sesión en vivo</span>
+          </div>
+        </div>
+        <div class="evidence-links">
+          <a href="#" target="_blank" class="evidence-link"><i class="fas fa-file-pdf"></i> Presentación (PDF)</a>
+        </div>
+      </div>
+    </div>
+  </td>
+</tr>
+
+<!-- Conferencia 6 -->
+<tr>
+  <td class="speaker-cell">
+    <img src="up.jpg" alt="Expositor Por Confirmar" class="speaker-img zoomable-img">
+    <div class="speaker-info">
+      <h3>Por Confirmar</h3>
+      <p>Conferencista Invitado</p>
+    </div>
+  </td>
+  <td class="details-cell">
+    <div class="detail-badge"><i class="far fa-clock"></i> 1:30 p.m. – 1:55 p.m.</div>
+    <div class="detail-badge"><i class="far fa-calendar"></i> Jueves 01 de Octubre</div>
+    <div class="detail-badge modality-badge"><i class="fas fa-building"></i> Auditorio Bernardo Lombardo</div>
+    <h4 class="talk-title">Conferencia por definir</h4>
+
+    <button type="button" class="accordion-btn" onclick="toggleEvidence('evidencia-j1-7', this)">
+      <span><i class="fas fa-folder-open"></i> Evidencias de la Actividad</span>
+      <i class="fas fa-chevron-down arrow-icon"></i>
+    </button>
+
+    <div id="evidencia-j1-7" class="accordion-content">
+      <div class="evidence-box">
+        <h5><i class="fas fa-images"></i> Galería de Evidencias</h5>
+        <div class="evidence-grid">
+          <div class="evidence-item">
+            <img src="up.jpg" alt="Evidencia Por Confirmar">
+            <span>Sesión en vivo</span>
+          </div>
+        </div>
+        <div class="evidence-links">
+          <a href="#" target="_blank" class="evidence-link"><i class="fas fa-file-pdf"></i> Presentación (PDF)</a>
+        </div>
+      </div>
+    </div>
+  </td>
+</tr>
+
+<!-- Conferencia 7 -->
+<tr>
+  <td class="speaker-cell">
+    <img src="up.jpg" alt="Ing. Carlos Fernández" class="speaker-img zoomable-img">
+    <div class="speaker-info">
+      <h3>Ing. Carlos Fernández</h3>
+      <p>Conferencista Invitado</p>
+    </div>
+  </td>
+  <td class="details-cell">
+    <div class="detail-badge"><i class="far fa-clock"></i> 2:00 p.m. – 2:25 p.m.</div>
+    <div class="detail-badge"><i class="far fa-calendar"></i> Jueves 01 de Octubre</div>
+    <div class="detail-badge modality-badge"><i class="fas fa-building"></i> Auditorio Bernardo Lombardo</div>
+    <h4 class="talk-title">Conferencia Magistral</h4>
+
+    <button type="button" class="accordion-btn" onclick="toggleEvidence('evidencia-j1-8', this)">
+      <span><i class="fas fa-folder-open"></i> Evidencias de la Actividad</span>
+      <i class="fas fa-chevron-down arrow-icon"></i>
+    </button>
+
+    <div id="evidencia-j1-8" class="accordion-content">
+      <div class="evidence-box">
+        <h5><i class="fas fa-images"></i> Galería de Evidencias</h5>
+        <div class="evidence-grid">
+          <div class="evidence-item">
+            <img src="up.jpg" alt="Evidencia Carlos Fernández">
+            <span>Sesión en vivo</span>
+          </div>
+        </div>
+        <div class="evidence-links">
+          <a href="#" target="_blank" class="evidence-link"><i class="fas fa-file-pdf"></i> Presentación (PDF)</a>
+        </div>
+      </div>
+    </div>
+  </td>
+</tr>
+
+<!-- Conferencia 8 -->
+<tr>
+  <td class="speaker-cell">
+    <img src="up.jpg" alt="Dr. Rodney Delgado-Serrano" class="speaker-img zoomable-img">
+    <div class="speaker-info">
+      <h3>Dr. Rodney Delgado-Serrano</h3>
+      <p>Conferencista Invitado</p>
+    </div>
+  </td>
+  <td class="details-cell">
+    <div class="detail-badge"><i class="far fa-clock"></i> 3:30 p.m. – 3:55 p.m.</div>
+    <div class="detail-badge"><i class="far fa-calendar"></i> Jueves 01 de Octubre</div>
+    <div class="detail-badge modality-badge"><i class="fas fa-building"></i> Auditorio Bernardo Lombardo</div>
+    <h4 class="talk-title">Conferencia Magistral</h4>
+
+    <button type="button" class="accordion-btn" onclick="toggleEvidence('evidencia-j1-9', this)">
+      <span><i class="fas fa-folder-open"></i> Evidencias de la Actividad</span>
+      <i class="fas fa-chevron-down arrow-icon"></i>
+    </button>
+
+    <div id="evidencia-j1-9" class="accordion-content">
+      <div class="evidence-box">
+        <h5><i class="fas fa-images"></i> Galería de Evidencias</h5>
+        <div class="evidence-grid">
+          <div class="evidence-item">
+            <img src="up.jpg" alt="Evidencia Rodney Delgado">
+            <span>Sesión en vivo</span>
+          </div>
+        </div>
+        <div class="evidence-links">
+          <a href="#" target="_blank" class="evidence-link"><i class="fas fa-file-pdf"></i> Presentación (PDF)</a>
+        </div>
+      </div>
+    </div>
+  </td>
+</tr>
+            </tbody>
+          </table>
+        </div>
+      </article>
+
+      <!-- DÍA 2: 2 DE OCTUBRE -->
+      <article class="bento-card program-day-panel" id="day2">
+        <div class="day-header">
+          <h2>Viernes, 2 de Octubre</h2>
+          <span class="badge">Día 2 - Ciencia Espacial</span>
+        </div>
+
+        <div class="table-responsive">
+          <table class="program-table">
+            <thead>
+              <tr>
+                <th>Expositor / Ponente</th>
+                <th>Detalles de la Conferencia</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- Actividades de la Mañana: Experimentos, Planetario y Observaciones -->
+<!-- Experimentos, Planetario y Observaciones -->
+<tr>
+  <td class="speaker-cell">
+    <img src="up.jpg" alt="Experimentos, Planetario y Observaciones" class="speaker-img zoomable-img">
+    <div class="speaker-info">
+      <h3>Kenia Rodríguez, Álvaro Guerra, Adam's Martínez, Franklin Vásquez</h3>
+      <p>Responsables de Actividades</p>
+    </div>
+  </td>
+  <td class="details-cell">
+    <div class="detail-badge"><i class="far fa-clock"></i> 9:30 a.m. – 11:30 a.m.</div>
+    <div class="detail-badge"><i class="far fa-calendar"></i> Viernes 02 de Octubre</div>
+    <div class="detail-badge modality-badge"><i class="fas fa-building"></i> Facultad de Ciencias Naturales, Exactas y Tecnología</div>
+    <h4 class="talk-title">Experimentos de Astronomía | Planetario | Observaciones Diurnas</h4>
+
+    <button type="button" class="accordion-btn" onclick="toggleEvidence('evidencia-v2-1', this)">
+      <span><i class="fas fa-folder-open"></i> Evidencias de la Actividad</span>
+      <i class="fas fa-chevron-down arrow-icon"></i>
+    </button>
+
+    <div id="evidencia-v2-1" class="accordion-content">
+      <div class="evidence-box">
+        <h5><i class="fas fa-images"></i> Galería de Evidencias</h5>
+        <div class="evidence-grid">
+          <div class="evidence-item">
+            <img src="up.jpg" alt="Evidencia Experimentos">
+            <span>Fotografía del evento</span>
+          </div>
+        </div>
+        <div class="evidence-links">
+          <a href="#" target="_blank" class="evidence-link"><i class="fas fa-file-pdf"></i> Material Informativo (PDF)</a>
+        </div>
+      </div>
+    </div>
+  </td>
+</tr>
+
+<!-- Conversatorio -->
+<tr>
+  <td class="speaker-cell">
+    <img src="up.jpg" alt="Conversatorio Sistema Solar" class="speaker-img zoomable-img">
+    <div class="speaker-info">
+      <h3>Dr. Eduardo Camacho, Dra. Madelaine Rojas, Adam's Martínez, Yaris Rodríguez</h3>
+      <p>Oradores</p>
+    </div>
+  </td>
+  <td class="details-cell">
+    <div class="detail-badge"><i class="far fa-clock"></i> 1:00 p.m. – 2:00 p.m.</div>
+    <div class="detail-badge"><i class="far fa-calendar"></i> Viernes 02 de Octubre</div>
+    <div class="detail-badge modality-badge"><i class="fas fa-building"></i> Biblioteca Simón Bolívar</div>
+    <h4 class="talk-title">Conversatorio: Una nueva Perspectiva del Sistema Solar</h4>
+
+    <button type="button" class="accordion-btn" onclick="toggleEvidence('evidencia-v2-2', this)">
+      <span><i class="fas fa-folder-open"></i> Evidencias de la Actividad</span>
+      <i class="fas fa-chevron-down arrow-icon"></i>
+    </button>
+
+    <div id="evidencia-v2-2" class="accordion-content">
+      <div class="evidence-box">
+        <h5><i class="fas fa-images"></i> Galería de Evidencias</h5>
+        <div class="evidence-grid">
+          <div class="evidence-item">
+            <img src="up.jpg" alt="Evidencia Conversatorio">
+            <span>Sesión en vivo</span>
+          </div>
+        </div>
+        <div class="evidence-links">
+          <a href="#" target="_blank" class="evidence-link"><i class="fas fa-file-pdf"></i> Resumen (PDF)</a>
+        </div>
+      </div>
+    </div>
+  </td>
+</tr>
+
+<!-- Foro -->
+<tr>
+  <td class="speaker-cell">
+    <img src="up.jpg" alt="Foro UNAM" class="speaker-img zoomable-img">
+    <div class="speaker-info">
+      <h3>Naddia McLean & Orlando López</h3>
+      <p>Conferencistas</p>
+    </div>
+  </td>
+  <td class="details-cell">
+    <div class="detail-badge"><i class="far fa-clock"></i> 2:30 p.m. – 3:00 p.m.</div>
+    <div class="detail-badge"><i class="far fa-calendar"></i> Viernes 02 de Octubre</div>
+    <div class="detail-badge modality-badge"><i class="fas fa-building"></i> Biblioteca Simón Bolívar</div>
+    <h4 class="talk-title">Foro: Experiencias de Estudiantes en la Escuela de Internacional de Verano de Astronomía Observacional de la UNAM</h4>
+
+    <button type="button" class="accordion-btn" onclick="toggleEvidence('evidencia-v2-3', this)">
+      <span><i class="fas fa-folder-open"></i> Evidencias de la Actividad</span>
+      <i class="fas fa-chevron-down arrow-icon"></i>
+    </button>
+
+    <div id="evidencia-v2-3" class="accordion-content">
+      <div class="evidence-box">
+        <h5><i class="fas fa-images"></i> Galería de Evidencias</h5>
+        <div class="evidence-grid">
+          <div class="evidence-item">
+            <img src="up.jpg" alt="Evidencia Foro UNAM">
+            <span>Presentación</span>
+          </div>
+        </div>
+        <div class="evidence-links">
+          <a href="#" target="_blank" class="evidence-link"><i class="fas fa-file-pdf"></i> Presentación (PDF)</a>
+        </div>
+      </div>
+    </div>
+  </td>
+</tr>
+
+<!-- Película -->
+<tr>
+  <td class="speaker-cell">
+    <img src="up.jpg" alt="Película Interestelar" class="speaker-img zoomable-img">
+    <div class="speaker-info">
+      <h3>Proyección Cine-Foro</h3>
+      <p>Actividad Cultural</p>
+    </div>
+  </td>
+  <td class="details-cell">
+    <div class="detail-badge"><i class="far fa-clock"></i> 4:30 p.m. – 8:00 p.m.</div>
+    <div class="detail-badge"><i class="far fa-calendar"></i> Viernes 02 de Octubre</div>
+    <div class="detail-badge modality-badge"><i class="fas fa-building"></i> Escuela de Física</div>
+    <h4 class="talk-title">Película Interestelar</h4>
+
+    <button type="button" class="accordion-btn" onclick="toggleEvidence('evidencia-v2-4', this)">
+      <span><i class="fas fa-folder-open"></i> Evidencias de la Actividad</span>
+      <i class="fas fa-chevron-down arrow-icon"></i>
+    </button>
+
+    <div id="evidencia-v2-4" class="accordion-content">
+      <div class="evidence-box">
+        <h5><i class="fas fa-images"></i> Galería de Evidencias</h5>
+        <div class="evidence-grid">
+          <div class="evidence-item">
+            <img src="up.jpg" alt="Evidencia Cine Foro">
+            <span>Fotografía de la proyección</span>
+          </div>
+        </div>
+        <div class="evidence-links">
+          <a href="#" target="_blank" class="evidence-link"><i class="fas fa-play-circle"></i> Ver Grabación / Reseña</a>
+        </div>
+      </div>
+    </div>
+  </td>
+</tr>
+            </tbody>
+          </table>
+        </div>
+      </article>
+
+      <!-- DÍA 3: 3 DE OCTUBRE -->
+      <article class="bento-card program-day-panel" id="day3">
+        <div class="day-header">
+          <h2>Sábado, 3 de Octubre</h2>
+          <span class="badge">Día 3 - Talleres y Observaciones</span>
+        </div>
+
+        <div class="table-responsive">
+          <table class="program-table">
+            <thead>
+              <tr>
+                <th>Expositor / Ponente</th>
+                <th>Detalles de la Conferencia</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- Experimentos de Astronomía -->
+<!-- Experimentos de Astronomía -->
+<tr>
+  <td class="speaker-cell">
+    <img src="up.jpg" alt="Experimentos de Astronomía" class="speaker-img zoomable-img">
+    <div class="speaker-info">
+      <h3>Franklin Vásquez, Kenia Rodríguez, Álvaro Guerra, Adam's Martínez</h3>
+      <p>Responsables de Actividad</p>
+    </div>
+  </td>
+  <td class="details-cell">
+    <div class="detail-badge"><i class="far fa-clock"></i> 8:00 a.m. – 11:00 a.m.</div>
+    <div class="detail-badge"><i class="far fa-calendar"></i> Sábado 03 de Octubre</div>
+    <div class="detail-badge modality-badge"><i class="fas fa-building"></i> Parque Omar</div>
+    <h4 class="talk-title">Experimentos de Astronomía</h4>
+
+    <button type="button" class="accordion-btn" onclick="toggleEvidence('evidencia-s3-1', this)">
+      <span><i class="fas fa-folder-open"></i> Evidencias de la Actividad</span>
+      <i class="fas fa-chevron-down arrow-icon"></i>
+    </button>
+
+    <div id="evidencia-s3-1" class="accordion-content">
+      <div class="evidence-box">
+        <h5><i class="fas fa-images"></i> Galería de Evidencias</h5>
+        <div class="evidence-grid">
+          <div class="evidence-item">
+            <img src="up.jpg" alt="Evidencia Experimentos Parque Omar">
+            <span>Fotografía del evento</span>
+          </div>
+        </div>
+        <div class="evidence-links">
+          <a href="#" target="_blank" class="evidence-link"><i class="fas fa-file-pdf"></i> Material Informativo (PDF)</a>
+        </div>
+      </div>
+    </div>
+  </td>
+</tr>
+
+<!-- Conferencia Internacional 1 -->
+<tr>
+  <td class="speaker-cell">
+    <img src="up.jpg" alt="Mgtr. Augusto Bouras" class="speaker-img zoomable-img">
+    <div class="speaker-info">
+      <h3>Mgtr. Augusto Bouras</h3>
+      <p>Conferencista Internacional</p>
+    </div>
+  </td>
+  <td class="details-cell">
+    <div class="detail-badge"><i class="far fa-clock"></i> 11:00 a.m. – 11:25 a.m.</div>
+    <div class="detail-badge"><i class="far fa-calendar"></i> Sábado 03 de Octubre</div>
+    <div class="detail-badge modality-badge"><i class="fas fa-globe"></i> Conferencia Internacional</div>
+    <h4 class="talk-title">Fotometría avanzada en clústers estelares</h4>
+
+    <button type="button" class="accordion-btn" onclick="toggleEvidence('evidencia-s3-2', this)">
+      <span><i class="fas fa-folder-open"></i> Evidencias de la Actividad</span>
+      <i class="fas fa-chevron-down arrow-icon"></i>
+    </button>
+
+    <div id="evidencia-s3-2" class="accordion-content">
+      <div class="evidence-box">
+        <h5><i class="fas fa-images"></i> Galería de Evidencias</h5>
+        <div class="evidence-grid">
+          <div class="evidence-item">
+            <img src="up.jpg" alt="Evidencia Augusto Bouras">
+            <span>Sesión en vivo</span>
+          </div>
+        </div>
+        <div class="evidence-links">
+          <a href="#" target="_blank" class="evidence-link"><i class="fas fa-file-pdf"></i> Presentación (PDF)</a>
+        </div>
+      </div>
+    </div>
+  </td>
+</tr>
+
+<!-- Conferencia Internacional 2 -->
+<tr>
+  <td class="speaker-cell">
+    <img src="up.jpg" alt="Mgtr. Galymzhan Baltabay" class="speaker-img zoomable-img">
+    <div class="speaker-info">
+      <h3>Mgtr. Galymzhan Baltabay</h3>
+      <p>Conferencista Internacional</p>
+    </div>
+  </td>
+  <td class="details-cell">
+    <div class="detail-badge"><i class="far fa-clock"></i> 11:30 a.m. – 11:55 a.m.</div>
+    <div class="detail-badge"><i class="far fa-calendar"></i> Sábado 03 de Octubre</div>
+    <div class="detail-badge modality-badge"><i class="fas fa-globe"></i> Conferencia Internacional</div>
+    <h4 class="talk-title">Conferencia Magistral</h4>
+
+    <button type="button" class="accordion-btn" onclick="toggleEvidence('evidencia-s3-3', this)">
+      <span><i class="fas fa-folder-open"></i> Evidencias de la Actividad</span>
+      <i class="fas fa-chevron-down arrow-icon"></i>
+    </button>
+
+    <div id="evidencia-s3-3" class="accordion-content">
+      <div class="evidence-box">
+        <h5><i class="fas fa-images"></i> Galería de Evidencias</h5>
+        <div class="evidence-grid">
+          <div class="evidence-item">
+            <img src="up.jpg" alt="Evidencia Galymzhan Baltabay">
+            <span>Sesión en vivo</span>
+          </div>
+        </div>
+        <div class="evidence-links">
+          <a href="#" target="_blank" class="evidence-link"><i class="fas fa-file-pdf"></i> Presentación (PDF)</a>
+        </div>
+      </div>
+    </div>
+  </td>
+</tr>
+
+<!-- Receso -->
+<tr style="background: rgba(14, 165, 233, 0.08);">
+  <td colspan="2" style="text-align: center; font-weight: bold; color: #0284c7; padding: 10px;">
+    <i class="fas fa-coffee"></i> 12:00 p.m. – 1:00 p.m. — RECESO
+  </td>
+</tr>
+
+<!-- Conferencia Internacional 3 -->
+<tr>
+  <td class="speaker-cell">
+    <img src="up.jpg" alt="Expositor Por Confirmar" class="speaker-img zoomable-img">
+    <div class="speaker-info">
+      <h3>Por Confirmar</h3>
+      <p>Conferencista Internacional</p>
+    </div>
+  </td>
+  <td class="details-cell">
+    <div class="detail-badge"><i class="far fa-clock"></i> 1:00 p.m. – 1:25 p.m.</div>
+    <div class="detail-badge"><i class="far fa-calendar"></i> Sábado 03 de Octubre</div>
+    <div class="detail-badge modality-badge"><i class="fas fa-globe"></i> Conferencia Internacional</div>
+    <h4 class="talk-title">Conferencia por definir</h4>
+
+    <button type="button" class="accordion-btn" onclick="toggleEvidence('evidencia-s3-4', this)">
+      <span><i class="fas fa-folder-open"></i> Evidencias de la Actividad</span>
+      <i class="fas fa-chevron-down arrow-icon"></i>
+    </button>
+
+    <div id="evidencia-s3-4" class="accordion-content">
+      <div class="evidence-box">
+        <h5><i class="fas fa-images"></i> Galería de Evidencias</h5>
+        <div class="evidence-grid">
+          <div class="evidence-item">
+            <img src="up.jpg" alt="Evidencia Por Confirmar">
+            <span>Sesión en vivo</span>
+          </div>
+        </div>
+        <div class="evidence-links">
+          <a href="#" target="_blank" class="evidence-link"><i class="fas fa-file-pdf"></i> Presentación (PDF)</a>
+        </div>
+      </div>
+    </div>
+  </td>
+</tr>
+
+<!-- Conferencia Internacional 4 -->
+<tr>
+  <td class="speaker-cell">
+    <img src="up.jpg" alt="Expositor Por Confirmar" class="speaker-img zoomable-img">
+    <div class="speaker-info">
+      <h3>Por Confirmar</h3>
+      <p>Conferencista Internacional</p>
+    </div>
+  </td>
+  <td class="details-cell">
+    <div class="detail-badge"><i class="far fa-clock"></i> 1:30 p.m. – 1:55 p.m.</div>
+    <div class="detail-badge"><i class="far fa-calendar"></i> Sábado 03 de Octubre</div>
+    <div class="detail-badge modality-badge"><i class="fas fa-globe"></i> Conferencia Internacional</div>
+    <h4 class="talk-title">Conferencia por definir</h4>
+
+    <button type="button" class="accordion-btn" onclick="toggleEvidence('evidencia-s3-5', this)">
+      <span><i class="fas fa-folder-open"></i> Evidencias de la Actividad</span>
+      <i class="fas fa-chevron-down arrow-icon"></i>
+    </button>
+
+    <div id="evidencia-s3-5" class="accordion-content">
+      <div class="evidence-box">
+        <h5><i class="fas fa-images"></i> Galería de Evidencias</h5>
+        <div class="evidence-grid">
+          <div class="evidence-item">
+            <img src="up.jpg" alt="Evidencia Por Confirmar">
+            <span>Sesión en vivo</span>
+          </div>
+        </div>
+        <div class="evidence-links">
+          <a href="#" target="_blank" class="evidence-link"><i class="fas fa-file-pdf"></i> Presentación (PDF)</a>
+        </div>
+      </div>
+    </div>
+  </td>
+</tr>
+
+<!-- Observaciones Nocturnas -->
+<tr>
+  <td class="speaker-cell">
+    <img src="up.jpg" alt="Observaciones Nocturnas" class="speaker-img zoomable-img">
+    <div class="speaker-info">
+      <h3>Asociación Panameña de Aficionados a la Astronomía (APAA)</h3>
+      <p>En colaboración con CEIC / Escuela de Física</p>
+    </div>
+  </td>
+  <td class="details-cell">
+    <div class="detail-badge"><i class="far fa-clock"></i> 8:00 p.m. – 11:00 p.m.</div>
+    <div class="detail-badge"><i class="far fa-calendar"></i> Sábado 03 de Octubre</div>
+    <div class="detail-badge modality-badge"><i class="fas fa-moon"></i> Campus Harmodio Arias Madrid</div>
+    <h4 class="talk-title">Observaciones Nocturnas con Telescopios</h4>
+
+    <button type="button" class="accordion-btn" onclick="toggleEvidence('evidencia-s3-6', this)">
+      <span><i class="fas fa-folder-open"></i> Evidencias de la Actividad</span>
+      <i class="fas fa-chevron-down arrow-icon"></i>
+    </button>
+
+    <div id="evidencia-s3-6" class="accordion-content">
+      <div class="evidence-box">
+        <h5><i class="fas fa-images"></i> Galería de Evidencias</h5>
+        <div class="evidence-grid">
+          <div class="evidence-item">
+            <img src="up.jpg" alt="Evidencia Observaciones Nocturnas">
+            <span>Fotografía del evento</span>
+          </div>
+        </div>
+        <div class="evidence-links">
+          <a href="#" target="_blank" class="evidence-link"><i class="fas fa-play-circle"></i> Ver Grabación / Reseña</a>
+        </div>
+      </div>
+    </div>
+  </td>
+</tr>
+            </tbody>
+          </table>
+        </div>
+      </article>
+
+      <!-- DÍA 4: 4 DE OCTUBRE -->
+      <article class="bento-card program-day-panel" id="day4">
+        <div class="day-header">
+          <h2>Domingo, 4 de Octubre</h2>
+          <span class="badge">Día 4 - Clausura</span>
+        </div>
+
+        <div class="table-responsive">
+          <table class="program-table">
+            <thead>
+              <tr>
+                <th>Expositor / Ponente</th>
+                <th>Detalles de la Conferencia</th>
+              </tr>
+            </thead>
+           <tbody>
+  <!-- Jornada de Cierre con Acordeón de Evidencias -->
+  <tr class="activity-row">
+    <td class="speaker-cell">
+      <img src="up.jpg" alt="Franklin Vásquez" class="speaker-img zoomable-img">
+      <div class="speaker-info">
+        <h3>Franklin Vásquez</h3>
+        <p>Conferencista Invitado</p>
+      </div>
+    </td>
+    <td class="details-cell">
+      <div class="detail-badge"><i class="far fa-clock"></i> 10:00 a.m. – 12:00 p.m.</div>
+      <div class="detail-badge"><i class="far fa-calendar"></i> Domingo 04 de Octubre</div>
+      <div class="detail-badge modality-badge"><i class="fas fa-video"></i> Modalidad Virtual</div>
+      
+      <h4 class="talk-title">Jornada de Cierre y Divulgación: Astrofotografía: del hobby a la exploración del cielo</h4>
+
+      <!-- Botón para desplegar la Evidencia -->
+      <button type="button" class="accordion-btn" onclick="toggleEvidence('evidencia-domingo-1', this)">
+        <span><i class="fas fa-folder-open"></i> Evidencias de la Actividad</span>
+        <i class="fas fa-chevron-down arrow-icon"></i>
+      </button>
+
+      <!-- Caja Desplegable (Accordion Content) -->
+      <div id="evidencia-domingo-1" class="accordion-content">
+        <div class="evidence-box">
+          <h5><i class="fas fa-images"></i> Galería de Evidencias</h5>
+          
+          <div class="evidence-grid">
+            <div class="evidence-item">
+              <img src="up.jpg" alt="Evidencia 1">
+              <span>Captura de Sesión</span>
+            </div>
+            <div class="evidence-item">
+              <img src="up.jpg" alt="Evidencia 2">
+              <span>Presentación</span>
+            </div>
+          </div>
+
+          <div class="evidence-links">
+            <a href="#" target="_blank" class="evidence-link">
+              <i class="fas fa-file-pdf"></i> Ver Presentación (PDF)
+            </a>
+            <a href="#" target="_blank" class="evidence-link">
+              <i class="fas fa-play-circle"></i> Grabación de la Sesión
+            </a>
+          </div>
+        </div>
+      </div>
+    </td>
+  </tr>
+</tbody>
+          </table>
+        </div>
+      </article>
+
+    </section>
+
+  </main>
+
+  <!-- PIE DE PÁGINA FLOTANTE -->
+  <div class="glass-footer">
+    <footer class="bento-card sponsors-section">
+      <p class="sponsors-title">Organizan y Patrocinan</p>
+      <div class="sponsors-grid">
+        <img src="up.jpg" alt="Universidad de Panamá" class="sponsor-logo">
+        <img src="Escuela de F[isica.jpeg" alt="Escuela de Física" class="sponsor-logo">
+        <img src="Facultad.jpeg" alt="Facultad de Ciencias" class="sponsor-logo">
+        <img src="APAA.jpeg" alt="APAA" class="sponsor-logo">
+        <img src="Astronomiyastrofi.jpeg" alt="Astronomía y Astrofísica" class="sponsor-logo">
+        <img src="Captura de pantalla 2026-09-19 023533.png" alt="100 Hours of Astronomy" class="sponsor-logo">
+      </div>
+      <p class="copyright-text">© 2026 - 100 Horas de Astronomía. Todos los derechos reservados.</p>
+    </footer>
+  </div>
+
+  <script src="programa.js"></script>
+</body>
+</html>

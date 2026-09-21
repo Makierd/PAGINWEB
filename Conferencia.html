@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conferencistas e Invitados — 100 Horas de Astronomía</title>
+    <link rel="shortcut icon" type="image/png" href="Logo numero 6-1, lente plano convexo.png">
+    
+    <!-- Hojas de estilo -->
+    <link rel="stylesheet" href="Confere.css">
+    
+    <!-- FontAwesome para íconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <canvas id="stars-canvas"></canvas>
+</head>
+
+<body>
+
+    <div class="glass-container">
+
+        <!-- Header Principal -->
+        <!--header class="bento-card header-card">
+            <div class="header-text">
+                <h1>100 Horas de Astronomía</h1>
+                <span class="event-date">1 al 4 de Octubre 2026</span>
+            </div>
+        </header-->
+
+        <!-- Navegación -->
+        <nav class="bento-card nav-card">
+            <ul class="menu">
+                <li><a href="Inicio.html">Inicio</a></li>
+                <li><a href="Evento.html">Evento</a></li>
+                <li><a href="Programa.html">Programa</a></li>
+                <li><a href="Conferencia.html" class="active">Conferencias e Invitados</a></li>
+                <li><a href="eventos.html">Actividades</a></li>
+                <li><a href="#">Organización</a></li>
+                <li><a href="#">Servicio Social</a></li>
+            </ul>
+        </nav>
+
+        <!-- ================= SECCIÓN CONFERENCISTAS E INVITADOS ================= -->
+        <main class="bento-card main-content-card">
+            <section id="conferencistas-section" class="speakers-section">
+                
+                <div class="section-header text-center mb-4">
+                    <h2><i class="fas fa-user-graduate"></i> Conferencistas e Invitados</h2>
+                    <p>Conoce a los expertos, investigadores y divulgadores que nos acompañan en las 100 Horas de Astronomía.</p>
+                </div>
+
+                <!-- Pestañas Superpuestas / Tarjetas Selección (Nacionales vs Internacionales) -->
+                <div class="tab-cards-container">
+                    <div class="tab-card active" id="tab-nacionales" onclick="switchSpeakerTab('nacionales')">
+                        <div class="tab-card-content">
+                            <img src="https://flagcdn.com/w40/pa.png" alt="Panamá" class="tab-flag-icon">
+                            <div class="tab-text">
+                                <h3>Conferencistas Nacionales</h3>
+                                <span><i class="fas fa-flag"></i> Panamá</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tab-card" id="tab-internacionales" onclick="switchSpeakerTab('internacionales')">
+                        <div class="tab-card-content">
+                            <div class="tab-flags-group">
+                                <img src="https://flagcdn.com/w40/ar.png" alt="Argentina" title="Argentina">
+                                <img src="https://flagcdn.com/w40/mx.png" alt="México" title="México">
+                                <img src="https://flagcdn.com/w40/kz.png" alt="Kazajistán" title="Kazajistán">
+                                <img src="https://flagcdn.com/w40/cl.png" alt="Chile" title="Chile">
+                            </div>
+                            <div class="tab-text">
+                                <h3>Conferencistas Internacionales</h3>
+                                <span><i class="fas fa-globe-americas"></i> Invitados Internacionales</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ================= BLOQUE NACIONALES ================= -->
+                <div id="group-nacionales" class="speaker-group active-group">
+                    <div class="speakers-grid">
+
+                        <!-- Ponente Nacional 1 -->
+                        <article class="speaker-card">
+                            <div class="speaker-card-header">
+                                <div class="speaker-photo-wrapper">
+                                    <img src="up.jpg" alt="Mgtr. Luis Marín" class="speaker-photo zoomable-img">
+                                    <span class="country-badge" title="Panamá">
+                                        <img src="https://flagcdn.com/w40/pa.png" alt="Panamá">
+                                    </span>
+                                </div>
+                                <div class="speaker-main-info">
+                                    <h3 class="speaker-name">Mgtr. Luis Marín</h3>
+                                    <p class="speaker-affiliation"><i class="fas fa-university"></i> Universidad de Panamá</p>
+                                    <span class="specialty-badge"><i class="fas fa-atom"></i> Astrofísica / Física</span>
+                                </div>
+                            </div>
+                            <div class="speaker-card-body">
+                                <div class="talk-info-box">
+                                    <span class="talk-label"><i class="fas fa-chalkboard-teacher"></i> Participación:</span>
+                                    <h4 class="talk-title-text">Conferencia Magistral</h4>
+                                </div>
+                                <p class="speaker-bio">
+                                    Profesor e investigador en la Escuela de Física. Apasionado por la divulgación científica y el estudio de los fenómenos astronómicos.
+                                </p>
+
+                                <button type="button" class="accordion-btn" onclick="toggleEvidence('ev-spk-nac-1', this)">
+                                    <span><i class="fas fa-folder-open"></i> Ver Evidencias / Detalle</span>
+                                    <i class="fas fa-chevron-down arrow-icon"></i>
+                                </button>
+                                <div id="ev-spk-nac-1" class="accordion-content">
+                                    <div class="evidence-box">
+                                        <h5><i class="fas fa-file-alt"></i> Material y Recursos</h5>
+                                        <div class="evidence-links">
+                                            <a href="#" target="_blank" class="evidence-link"><i class="fas fa-file-pdf"></i> Reseña Completa (PDF)</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Ponente Nacional 2 -->
+                        <article class="speaker-card">
+                            <div class="speaker-card-header">
+                                <div class="speaker-photo-wrapper">
+                                    <img src="up.jpg" alt="Dr. Rodney Delgado-Serrano" class="speaker-photo zoomable-img">
+                                    <span class="country-badge" title="Panamá">
+                                        <img src="https://flagcdn.com/w40/pa.png" alt="Panamá">
+                                    </span>
+                                </div>
+                                <div class="speaker-main-info">
+                                    <h3 class="speaker-name">Dr. Rodney Delgado-Serrano</h3>
+                                    <p class="speaker-affiliation"><i class="fas fa-university"></i> Observatorio Astronómico de Panamá (UTP)</p>
+                                    <span class="specialty-badge"><i class="fas fa-star"></i> Astrofísica Observacional</span>
+                                </div>
+                            </div>
+                            <div class="speaker-card-body">
+                                <div class="talk-info-box">
+                                    <span class="talk-label"><i class="fas fa-chalkboard-teacher"></i> Participación:</span>
+                                    <h4 class="talk-title-text">Conferencia Magistral</h4>
+                                </div>
+                                <p class="speaker-bio">
+                                    Doctor en Astrofísica, destacado por su labor en investigación galáctica y por impulsar la astronomía a nivel académico e internacional en Panamá.
+                                </p>
+
+                                <button type="button" class="accordion-btn" onclick="toggleEvidence('ev-spk-nac-2', this)">
+                                    <span><i class="fas fa-folder-open"></i> Ver Evidencias / Detalle</span>
+                                    <i class="fas fa-chevron-down arrow-icon"></i>
+                                </button>
+                                <div id="ev-spk-nac-2" class="accordion-content">
+                                    <div class="evidence-box">
+                                        <h5><i class="fas fa-file-alt"></i> Material y Recursos</h5>
+                                        <div class="evidence-links">
+                                            <a href="#" target="_blank" class="evidence-link"><i class="fas fa-file-pdf"></i> Presentación (PDF)</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+
+                    </div>
+                </div>
+
+                <!-- ================= BLOQUE INTERNACIONALES ================= -->
+                <div id="group-internacionales" class="speaker-group">
+                    <div class="speakers-grid">
+
+                        <!-- Ponente Internacional 1 -->
+                        <article class="speaker-card">
+                            <div class="speaker-card-header">
+                                <div class="speaker-photo-wrapper">
+                                    <img src="up.jpg" alt="Dr. Pablo Martín Weigandt" class="speaker-photo zoomable-img">
+                                    <span class="country-badge" title="Argentina">
+                                        <img src="https://flagcdn.com/w40/ar.png" alt="Argentina">
+                                    </span>
+                                </div>
+                                <div class="speaker-main-info">
+                                    <h3 class="speaker-name">Dr. Pablo Martín Weigandt Beckmann</h3>
+                                    <p class="speaker-affiliation"><i class="fas fa-globe"></i> Observatorio de Argentina / Internacional</p>
+                                    <span class="specialty-badge"><i class="fas fa-telescope"></i> Observación Astronómica</span>
+                                </div>
+                            </div>
+                            <div class="speaker-card-body">
+                                <div class="talk-info-box">
+                                    <span class="talk-label"><i class="fas fa-chalkboard-teacher"></i> Participación:</span>
+                                    <h4 class="talk-title-text">OAB: tu ventana al cosmos</h4>
+                                </div>
+                                <p class="speaker-bio">
+                                    Especialista en observación astronómica y desarrollo de tecnologías científicas aplicadas al estudio de la bóveda celeste.
+                                </p>
+
+                                <button type="button" class="accordion-btn" onclick="toggleEvidence('ev-spk-int-1', this)">
+                                    <span><i class="fas fa-folder-open"></i> Ver Evidencias / Detalle</span>
+                                    <i class="fas fa-chevron-down arrow-icon"></i>
+                                </button>
+                                <div id="ev-spk-int-1" class="accordion-content">
+                                    <div class="evidence-box">
+                                        <h5><i class="fas fa-file-alt"></i> Material y Recursos</h5>
+                                        <div class="evidence-links">
+                                            <a href="#" target="_blank" class="evidence-link"><i class="fas fa-file-pdf"></i> Presentación (PDF)</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Ponente Internacional 2 -->
+                        <article class="speaker-card">
+                            <div class="speaker-card-header">
+                                <div class="speaker-photo-wrapper">
+                                    <img src="up.jpg" alt="Mgtr. Galymzhan Baltabay" class="speaker-photo zoomable-img">
+                                    <span class="country-badge" title="Kazajistán">
+                                        <img src="https://flagcdn.com/w40/kz.png" alt="Kazajistán">
+                                    </span>
+                                </div>
+                                <div class="speaker-main-info">
+                                    <h3 class="speaker-name">Mgtr. Galymzhan Baltabay</h3>
+                                    <p class="speaker-affiliation"><i class="fas fa-globe"></i> Institución Internacional</p>
+                                    <span class="specialty-badge"><i class="fas fa-space-shuttle"></i> Ciencias Espaciales</span>
+                                </div>
+                            </div>
+                            <div class="speaker-card-body">
+                                <div class="talk-info-box">
+                                    <span class="talk-label"><i class="fas fa-chalkboard-teacher"></i> Participación:</span>
+                                    <h4 class="talk-title-text">Conferencia Magistral Internacional</h4>
+                                </div>
+                                <p class="speaker-bio">
+                                    Investigador internacional enfocado en análisis de datos astronómicos y fotometría avanzada en proyectos multinacionales.
+                                </p>
+
+                                <button type="button" class="accordion-btn" onclick="toggleEvidence('ev-spk-int-2', this)">
+                                    <span><i class="fas fa-folder-open"></i> Ver Evidencias / Detalle</span>
+                                    <i class="fas fa-chevron-down arrow-icon"></i>
+                                </button>
+                                <div id="ev-spk-int-2" class="accordion-content">
+                                    <div class="evidence-box">
+                                        <h5><i class="fas fa-file-alt"></i> Material y Recursos</h5>
+                                        <div class="evidence-links">
+                                            <a href="#" target="_blank" class="evidence-link"><i class="fas fa-file-pdf"></i> Presentación (PDF)</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+
+                    </div>
+                </div>
+
+            </section>
+        </main>
+
+        <!-- Footer / Sección de Instituciones Organizadas -->
+        <footer class="bento-card sponsors-section">
+      <p class="sponsors-title">Organizan y Patrocinan</p>
+      <div class="sponsors-grid">
+        <img src="up.jpg" alt="Universidad de Panamá" class="sponsor-logo">
+        <img src="Escuela de F[isica.jpeg" alt="Escuela de Física" class="sponsor-logo">
+        <img src="Facultad.jpeg" alt="Facultad de Ciencias" class="sponsor-logo">
+        <img src="APAA.jpeg" alt="APAA" class="sponsor-logo">
+        <img src="Astronomiyastrofi.jpeg" alt="Astronomía y Astrofísica" class="sponsor-logo">
+        <img src="Captura de pantalla 2026-09-19 023533.png" alt="100 Hours of Astronomy" class="sponsor-logo">
+      </div>
+      <p class="copyright-text">© 2026 - 100 Horas de Astronomía. Todos los derechos reservados.</p>
+    </footer>
+
+    </div>
+
+    <!-- Archivo JS separado -->
+    <script src="Confere.js"></script>
+</body>
+
+</html>

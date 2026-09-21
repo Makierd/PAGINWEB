@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>100 Horas de Astronomía - Evento</title>
+  
+  <link rel="shortcut icon" type="image/png" href="Logo numero 6-1, lente plano convexo.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="Evento.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+</head>
+<body>
+
+  <!-- NAVEGACIÓN FLOTANTE -->
+  <header class="glass-navigation">
+    <nav class="bento-card nav-card">
+      <ul class="menu">
+        <li><a href="Inicio.html">Inicio</a></li>
+        <li><a href="Evento.html" class="active">Evento</a></li>
+        <li><a href="Programa.html">Programa</a></li>
+        <li><a href="Conferencia.html">Conferencias e Invitados</a></li>
+        <li><a href="Actividades.html">Actividades</a></li>
+        <li><a href="#">Organización</a></li>
+        <li><a href="#">Servicio Social</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- FLECHAS DE NAVEGACIÓN -->
+  <button class="nav-arrow prev-arrow" id="prevBtn" title="Anterior"><i class="fas fa-chevron-left"></i></button>
+  <button class="nav-arrow next-arrow" id="nextBtn" title="Siguiente"><i class="fas fa-chevron-right"></i></button>
+
+  <!-- LIENZO DE DIAPOSITIVAS (SLIDES DIAGONALES) -->
+  <div class="slides-viewport">
+    <main class="slides-world" id="slidesWorld">
+      
+      <!-- CONTENEDOR 1: ¿Qué es 100 Horas de Astronomía? -->
+      <section class="slide-screen">
+        <article class="bento-card slide-card">
+          <div class="badge">01 / Concepto</div>
+          <div class="card-icon"><i class="fas fa-globe"></i></div>
+          <h2>¿Qué es 100 Horas de Astronomía?</h2>
+          <div class="card-content">
+            <p>
+              Es una iniciativa global promovida por la Unión Astronómica Internacional (IAU) que reúne a profesionales, aficionados y entusiastas del espacio durante 100 horas continuas. Su propósito es compartir las maravillas del universo con la sociedad a través de observaciones, talleres y actividades divulgativas.
+            </p>
+          </div>
+        </article>
+      </section>
+
+      <!-- CONTENEDOR 2: Objetivo de la actividad -->
+      <section class="slide-screen">
+        <article class="bento-card slide-card">
+          <div class="badge">02 / Propósito</div>
+          <div class="card-icon"><i class="fas fa-bullseye"></i></div>
+          <h2>Objetivo de la Actividad</h2>
+          <div class="card-content">
+            <p>
+              Fomentar el pensamiento crítico, despertar la vocación científica en jóvenes y democratizar el acceso al conocimiento astronómico. Se busca acercar la ciencia a la comunidad de forma interactiva, práctica y accesible para romper la barrera entre la academia y el público general.
+            </p>
+          </div>
+        </article>
+      </section>
+
+      <!-- CONTENEDOR 3: Importancia de la divulgación -->
+      <section class="slide-screen">
+        <article class="bento-card slide-card">
+          <div class="badge">03 / Relevancia</div>
+          <div class="card-icon"><i class="fas fa-atom"></i></div>
+          <h2>Importancia de la Divulgación</h2>
+          <div class="card-content">
+            <p>
+              La astronomía, astrofísica, cosmología y las ciencias espaciales nos ayudan a comprender nuestros orígenes y nuestro lugar en el cosmos. Divulgar estas disciplinas inspira innovación tecnológica, amplía nuestra perspectiva del planeta y reaviva la noción de que el conocimiento científico está en constante evolución.
+            </p>
+          </div>
+        </article>
+      </section>
+
+      <!-- CONTENEDOR 4: Participación de la Universidad de Panamá -->
+      <section class="slide-screen">
+        <article class="bento-card slide-card">
+          <div class="badge">04 / Institución</div>
+          <div class="card-icon"><i class="fas fa-university"></i></div>
+          <h2>Universidad de Panamá en la Iniciativa</h2>
+          <div class="card-content">
+            <p>
+              Desde la Facultad de Ciencias Naturales, Exactas y Tecnología y la Escuela de Física, la Universidad de Panamá lidera la organización local. A través de sus estudiantes y docentes, la institución impulsa la investigación, brinda talleres especializados y coordina las jornadas de observación astronómica.
+            </p>
+          </div>
+        </article>
+      </section>
+
+      <!-- CONTENEDOR 5: Público al que está dirigido -->
+      <section class="slide-screen">
+        <article class="bento-card slide-card">
+          <div class="badge">05 / Alcance</div>
+          <div class="card-icon"><i class="fas fa-users"></i></div>
+          <h2>¿A Quién va Dirigido?</h2>
+          <div class="card-content">
+            <p>
+              Las actividades están abiertas a todo público: estudiantes universitarios, escolares, docentes, familias y cualquier aficionado con curiosidad por el cosmos. No se requieren conocimientos previos de física o matemáticas, solo el deseo de explorar el universo.
+            </p>
+          </div>
+        </article>
+      </section>
+
+    </main>
+  </div>
+
+  <!-- PIE DE PÁGINA FLOTANTE -->
+  <div class="glass-footer">
+    <footer class="bento-card sponsors-section">
+      <p class="sponsors-title">Organizan y Patrocinan</p>
+      <div class="sponsors-grid">
+        <img src="up.jpg" alt="Universidad de Panamá" class="sponsor-logo">
+        <img src="Escuela de F[isica.jpeg" alt="Escuela de Física" class="sponsor-logo">
+        <img src="Facultad.jpeg" alt="Facultad de Ciencias" class="sponsor-logo">
+        <img src="APAA.jpeg" alt="APAA" class="sponsor-logo">
+        <img src="Astronomiyastrofi.jpeg" alt="Astronomía y Astrofísica" class="sponsor-logo">
+        <img src="Captura de pantalla 2026-09-19 023533.png" alt="100 Hours of Astronomy" class="sponsor-logo">
+      </div>
+      <p class="copyright-text">© 2026 - 100 Horas de Astronomía. Todos los derechos reservados.</p>
+    </footer>
+  </div>
+
+  <script src="Evento.js"></script>
+</body>
+</html>

@@ -60,6 +60,20 @@ body {
     overflow-x: hidden;
 }
 
+/* Fondo animado en 3D. Mientras no arranque (o si WebGL falla)
+   se mantiene visible la imagen de arriba como respaldo. */
+#fondo-3d {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+}
+
+body.fondo-3d-activo {
+    background-image: none;
+    background-color: var(--color-fondo);
+}
+
 /* Bloquea el scroll mientras se muestra la intro */
 body.no-scroll {
     overflow: hidden;

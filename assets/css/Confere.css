@@ -1,0 +1,480 @@
+/* ================= ESTILOS BASE ESPACIALES ================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+}
+
+body {
+    /* Fondo Oscuro Estelar con imagen de estrellas profundas */
+    background: #020617 url('https://images.unsplash.com/photo-1506703719100-a0f3a48c0f86?q=80&w=2070&auto=format&fit=crop') no-repeat center center fixed / cover;
+    color: #e2e8f0;
+    min-height: 100vh;
+    padding: 20px;
+    overflow-x: hidden;
+}
+
+.glass-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Tarjetas Estilo Bento Glassmorphism */
+.bento-card {
+    background: rgba(15, 23, 42, 0.65);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 24px;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5);
+}
+
+/* Header */
+.header-card {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.logo-wrapper img {
+    max-height: 70px;
+    width: auto;
+}
+
+.header-text h1 {
+    margin: 0;
+    font-size: 1.8rem;
+    color: #38bdf8;
+    text-shadow: 0 0 15px rgba(56, 189, 248, 0.4);
+}
+
+.event-date {
+    color: #94a3b8;
+    font-weight: 500;
+}
+
+/* Menú de Navegación */
+.nav-card {
+    padding: 12px 24px;
+}
+
+.menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: center;
+}
+
+.menu li a {
+    text-decoration: none;
+    color: #e2e8f0;
+    font-weight: 600;
+    padding: 8px 16px;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+
+.menu li a:hover,
+.menu li a.active {
+    background: rgba(56, 189, 248, 0.2);
+    color: #38bdf8;
+    border: 1px solid rgba(56, 189, 248, 0.4);
+}
+
+/* ================= SECCIÓN DE CONFERENCISTAS ================= */
+.speakers-section {
+    padding: 10px;
+}
+
+.section-header h2 {
+    color: #ffffff;
+    font-size: 1.8rem;
+    margin-bottom: 8px;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+}
+
+.section-header p {
+    color: #94a3b8;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.mb-4 {
+    margin-bottom: 2rem;
+}
+
+/* Selector Superpuesto (Nacionales vs Internacionales) */
+.tab-cards-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-bottom: 35px;
+    min-height: 110px;
+}
+
+.tab-card {
+    width: 45%;
+    max-width: 420px;
+    background: rgba(30, 41, 59, 0.7);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 16px;
+    padding: 16px 20px;
+    cursor: pointer;
+    position: absolute;
+    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+#tab-nacionales {
+    left: 8%;
+    z-index: 2;
+}
+
+#tab-internacionales {
+    right: 8%;
+    z-index: 1;
+    transform: scale(0.92) translateY(8px);
+    opacity: 0.6;
+    background: rgba(15, 23, 42, 0.8);
+}
+
+#tab-nacionales.active,
+#tab-internacionales.active {
+    z-index: 3;
+    transform: scale(1.02);
+    opacity: 1;
+    border-color: #38bdf8;
+    box-shadow: 0 0 25px rgba(56, 189, 248, 0.35);
+    background: rgba(30, 41, 59, 0.9);
+}
+
+#tab-nacionales:not(.active),
+#tab-internacionales:not(.active) {
+    z-index: 1;
+    transform: scale(0.92) translateY(8px);
+    opacity: 0.6;
+    background: rgba(15, 23, 42, 0.8);
+}
+
+.tab-card-content {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.tab-flag-icon {
+    width: 38px;
+    height: 26px;
+    border-radius: 4px;
+    object-fit: cover;
+}
+
+.tab-flags-group {
+    display: flex;
+    align-items: center;
+}
+
+.tab-flags-group img {
+    width: 24px;
+    height: 16px;
+    border-radius: 3px;
+    margin-right: -6px;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.tab-text h3 {
+    margin: 0;
+    font-size: 1.05rem;
+    color: #ffffff;
+}
+
+.tab-text span {
+    font-size: 0.82rem;
+    color: #94a3b8;
+}
+
+/* Mostrar / Ocultar Grupos */
+.speaker-group {
+    display: none;
+}
+
+.speaker-group.active-group {
+    display: block;
+    animation: fadeIn 0.4s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Tarjetas de Ponentes */
+.speakers-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 25px;
+}
+
+.speaker-card {
+    background: rgba(30, 41, 59, 0.5);
+    backdrop-filter: blur(10px);
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.speaker-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(56, 189, 248, 0.4);
+}
+
+.speaker-card-header {
+    padding: 18px;
+    background: rgba(15, 23, 42, 0.6);
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.speaker-photo-wrapper {
+    position: relative;
+    width: 75px;
+    height: 75px;
+    flex-shrink: 0;
+}
+
+.speaker-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid #38bdf8;
+    box-shadow: 0 0 10px rgba(56, 189, 248, 0.3);
+}
+
+.country-badge {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 2px solid #0f172a;
+}
+
+.country-badge img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.speaker-main-info {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.speaker-name {
+    font-size: 1.1rem;
+    color: #ffffff;
+    margin: 0;
+}
+
+.speaker-affiliation {
+    font-size: 0.82rem;
+    color: #94a3b8;
+    margin: 0;
+}
+
+.specialty-badge {
+    display: inline-block;
+    font-size: 0.75rem;
+    background: rgba(56, 189, 248, 0.15);
+    color: #38bdf8;
+    border: 1px solid rgba(56, 189, 248, 0.3);
+    padding: 3px 10px;
+    border-radius: 12px;
+    font-weight: 600;
+    width: fit-content;
+}
+
+.speaker-card-body {
+    padding: 18px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.talk-info-box {
+    background: rgba(56, 189, 248, 0.08);
+    border-left: 4px solid #38bdf8;
+    padding: 10px 12px;
+    border-radius: 6px;
+    margin-bottom: 12px;
+}
+
+.talk-label {
+    font-size: 0.72rem;
+    color: #38bdf8;
+    font-weight: 700;
+}
+
+.talk-title-text {
+    font-size: 0.95rem;
+    color: #f8fafc;
+    margin: 2px 0 0 0;
+}
+
+.speaker-bio {
+    font-size: 0.88rem;
+    color: #cbd5e1;
+    line-height: 1.5;
+    margin-bottom: 15px;
+    flex-grow: 1;
+}
+
+/* Botón Acordeón */
+.accordion-btn {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #e2e8f0;
+    padding: 10px 14px;
+    border-radius: 10px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.85rem;
+    transition: all 0.3s ease;
+}
+
+.accordion-btn:hover {
+    background: rgba(56, 189, 248, 0.15);
+    color: #38bdf8;
+    border-color: rgba(56, 189, 248, 0.3);
+}
+
+.accordion-content {
+    display: none;
+    padding-top: 12px;
+}
+
+.accordion-content.active {
+    display: block;
+}
+
+.evidence-box {
+    background: rgba(15, 23, 42, 0.6);
+    border-radius: 8px;
+    padding: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.evidence-box h5 {
+    color: #94a3b8;
+    margin-bottom: 8px;
+    font-size: 0.8rem;
+}
+
+.evidence-link {
+    color: #38bdf8;
+    text-decoration: none;
+    font-size: 0.85rem;
+}
+
+.evidence-link:hover {
+    text-decoration: underline;
+}
+
+/* Footer Sponsor Grid */
+.sponsors-section {
+    text-align: center;
+}
+
+.sponsors-title {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    color: #94a3b8;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+}
+
+.sponsors-grid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.sponsor-logo {
+    max-height: 45px;
+    width: auto;
+    filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.2));
+}
+
+.copyright-text {
+    font-size: 0.8rem;
+    color: #64748b;
+    margin-top: 20px;
+}
+
+/* Responsividad para móviles */
+@media (max-width: 768px) {
+    .tab-cards-container {
+        flex-direction: column;
+        height: auto;
+        gap: 12px;
+        min-height: auto;
+    }
+
+    .tab-card {
+        position: relative;
+        width: 100%;
+        max-width: 100%;
+        left: auto !important;
+        right: auto !important;
+        transform: none !important;
+        opacity: 1 !important;
+    }
+}
+
+/* Fondo base azul oscuro azulado profundo */
+body {
+    background-color: #030712; /* Azul muy oscuro estilo Tailwind slate-950 */
+    color: #e2e8f0;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+    position: relative;
+    overflow-x: hidden;
+}
+
+/* El canvas de partículas fijado al fondo de toda la pantalla */
+#stars-canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1; /* Se queda detrás de todo el contenido */
+    pointer-events: none;
+}

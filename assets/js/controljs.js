@@ -1,45 +1,52 @@
-// ==========================================
-// CONTROL DE INTRO Y NAVEGACIÓN
-// ==========================================
-
-// 1. Comprobar apenas cargue la página
-document.addEventListener('DOMContentLoaded', () => {
+// router.js — Control de la intro y liberación del scroll
+(function () {
   const hasSeenIntro = sessionStorage.getItem('hasSeenIntro');
 
-  // Si ya vio la intro en esta sesión, la ocultamos directo
   if (hasSeenIntro === 'true') {
-    ocultarIntro();
+    // Si ya vio la intro, desbloqueamos el scroll de una vez antes de pintar la pantalla
+    document.documentElement.classList.add('skip-intro');
+    document.addEventListener('DOMContentLoaded', () => {
+      liberarScroll();
+    });
   }
-});
+})();
 
-// 2. Función interna para ocultar contenedores y liberar scroll
-function ocultarIntro() {
-  const introScreen = document.getElementById('intro-screen');
-  const sunContainer = document.getElementById('sun-canvas-container');
-  const enterBtn = document.getElementById('enter-btn');
-
-  if (introScreen) introScreen.style.display = 'none';
-  if (sunContainer) sunContainer.style.display = 'none';
-  if (enterBtn) enterBtn.style.display = 'none';
-
-  // Liberar scroll en body y html
-  document.body.style.overflow = 'auto';
-  document.documentElement.style.overflow = 'auto';
+// Función para restaurar el scroll
+function liberarScroll() {
   document.body.classList.remove('no-scroll');
+  document.documentElement.classList.remove('no-scroll');
+  document.body.style.overflow = 'unset';
+  document.body.style.overflowY = 'auto';
+  document.documentElement.style.overflow = 'unset';
+  document.documentElement.style.overflowY = 'auto';
 }
 
-// 3. Tu función enterSite() que ejecuta el botón al hacer clic
-function enterSite() {
-  // Guardamos la marca para que recuerde que ya ingresó
+// Función que ejecuta el botón de ingresar
+function marcarIntroVista() {
+  // 1. Guardar en memoria
   sessionStorage.setItem('hasSeenIntro', 'true');
   
-  // Ocultamos todo y liberamos scroll
-  ocultarIntro();
+  // 2. Ocultar los elementos de la intro
+  const introScreen = document.getElementById('intro-screen');
+  const sunContainer = document.getElementById('sun-canvas-container');
+  
+  if (introScreen) {
+    introScreen.style.opacity = '0';
+    introScreen.style.pointerEvents = 'none';
+    setTimeout(() => {
+      introScreen.style.display = 'none';
+    }, 400);
+  }
+
+  if (sunContainer) {
+    sunContainer.style.display = 'none';
+  }
+
+  // 3. Forzar liberación del scroll
+  liberarScroll();
+
+  // 4. Compatibilidad con tu función previa
+  if (typeof enterSite === 'function') {
+    enterSite();
+  }
 }
-
-// Hacer la función accesible globalmente para el onclick="enterSite()"
-window.enterSite = enterSite;
-
-// Hacer las funciones accesibles globalmente
-window.liberarScroll = liberarScroll;
-window.marcarIntroVista = marcarIntroVista;

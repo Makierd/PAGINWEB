@@ -1,52 +1,36 @@
-// router.js — Control de la intro y liberación del scroll
-(function () {
+// ==========================================
+// CONTROL DE INTRO Y NAVEGACIÓN
+// ==========================================
+
+document.addEventListener('DOMContentLoaded', () => {
   const hasSeenIntro = sessionStorage.getItem('hasSeenIntro');
 
+  // Si ya vio la intro, la ocultamos de una
   if (hasSeenIntro === 'true') {
-    // Si ya vio la intro, desbloqueamos el scroll de una vez antes de pintar la pantalla
-    document.documentElement.classList.add('skip-intro');
-    document.addEventListener('DOMContentLoaded', () => {
-      liberarScroll();
-    });
+    ocultarIntro();
   }
-})();
+});
 
-// Función para restaurar el scroll
-function liberarScroll() {
-  document.body.classList.remove('no-scroll');
-  document.documentElement.classList.remove('no-scroll');
-  document.body.style.overflow = 'unset';
-  document.body.style.overflowY = 'auto';
-  document.documentElement.style.overflow = 'unset';
-  document.documentElement.style.overflowY = 'auto';
-}
-
-// Función que ejecuta el botón de ingresar
-function marcarIntroVista() {
-  // 1. Guardar en memoria
-  sessionStorage.setItem('hasSeenIntro', 'true');
-  
-  // 2. Ocultar los elementos de la intro
+function ocultarIntro() {
   const introScreen = document.getElementById('intro-screen');
   const sunContainer = document.getElementById('sun-canvas-container');
-  
-  if (introScreen) {
-    introScreen.style.opacity = '0';
-    introScreen.style.pointerEvents = 'none';
-    setTimeout(() => {
-      introScreen.style.display = 'none';
-    }, 400);
-  }
+  const enterBtn = document.getElementById('enter-btn');
 
-  if (sunContainer) {
-    sunContainer.style.display = 'none';
-  }
+  if (introScreen) introScreen.style.display = 'none';
+  if (sunContainer) sunContainer.style.display = 'none';
+  if (enterBtn) enterBtn.style.display = 'none';
 
-  // 3. Forzar liberación del scroll
-  liberarScroll();
-
-  // 4. Compatibilidad con tu función previa
-  if (typeof enterSite === 'function') {
-    enterSite();
-  }
+  // Desbloquear scroll
+  document.body.style.overflow = 'auto';
+  document.documentElement.style.overflow = 'auto';
+  document.body.classList.remove('no-scroll');
 }
+
+// La función exacta que llama tu botón onclick
+function marcarIntroVista() {
+  sessionStorage.setItem('hasSeenIntro', 'true');
+  ocultarIntro();
+}
+
+// La exponemos para que el onclick del HTML la reconozca sin problemas
+window.marcarIntroVista = marcarIntroVista;

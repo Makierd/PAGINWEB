@@ -34,3 +34,24 @@ function marcarIntroVista() {
 
 // La exponemos para que el onclick del HTML la reconozca sin problemas
 window.marcarIntroVista = marcarIntroVista;
+document.addEventListener('DOMContentLoaded', () => {
+  const enterBtn = document.getElementById('enter-btn');
+
+  // Si el botón existe en esta página, le asignamos el clic por código
+  if (enterBtn) {
+    enterBtn.addEventListener('click', () => {
+      console.log('¡Clic detectado!');
+      sessionStorage.setItem('hasSeenIntro', 'true');
+      
+      // Ocultar la intro
+      const introScreen = document.getElementById('intro-screen');
+      const sunContainer = document.getElementById('sun-canvas-container');
+      
+      if (introScreen) introScreen.style.display = 'none';
+      if (sunContainer) sunContainer.style.display = 'none';
+      
+      // Reactivar scroll
+      document.body.style.overflow = 'auto';
+    });
+  }
+});

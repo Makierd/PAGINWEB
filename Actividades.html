@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividades - 100 Horas de Astronomía</title>
+    
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/png" href="Captura de pantalla 2026-09-19 023533.png">
+    
+    <!-- Hojas de Estilo -->
+    <link rel="stylesheet" href="Actividades.css">
+    
+    <!-- Librería FontAwesome para iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Three.js CDN -->
+     <script src="controljs.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    
+</head>
+
+<body>
+
+    <!-- NAV / MENÚ DE NAVEGACIÓN -->
+    <header class="glass-header">
+  <nav class="glass-nav">
+    <!-- Ajusta la clase "active" según la página en la que estés parado -->
+    <a href="index.html" class="nav-item">Inicio</a>
+    <a href="Evento.html" class="nav-item">Evento</a>
+    <a href="Programa.html" class="nav-item">Programa</a>
+    <a href="Conferencia.html" class="nav-item">Conferencias e Invitados</a>
+    <a href="Actividades.html" class="nav-item">Actividades</a>
+    <a href="Organizacion.html" class="nav-item">Organización</a>
+    <a href="ServicioSocial.html" class="nav-item">Servicio Social</a>
+  </nav>
+</header>
+
+    <!-- SECCIÓN DE ACTIVIDADES -->
+    <section class="activities-section">
+        <div class="section-header">
+            <h2>Bitácora de Actividades</h2>
+            <p>Explora nuestras próximas conferencias y revisa la evidencia de los eventos realizados.</p>
+            
+            <!-- Filtros por estado -->
+            <div class="filter-tabs">
+                <button class="filter-btn active" onclick="filterActivities('all')">Todas</button>
+                <button class="filter-btn" onclick="filterActivities('upcoming')">Próximas</button>
+                <button class="filter-btn" onclick="filterActivities('completed')">Realizadas</button>
+            </div>
+        </div>
+
+        <!-- Grid donde se cargan las tarjetas dinámicamente -->
+        <div class="activities-grid" id="activities-container">
+            <!-- Las tarjetas se generan mediante Actividades.js -->
+        </div>
+    </section>
+
+    <!-- MODAL DE DETALLES Y EVIDENCIAS -->
+    <div id="activity-modal" class="activity-modal">
+        <div class="modal-content bento-card">
+            <button class="close-modal" onclick="closeModal()">&times;</button>
+            <div id="modal-body">
+                <!-- El contenido extendido se inyecta desde JS -->
+            </div>
+        </div>
+    </div>
+
+    <!-- PIE DE PÁGINA / PATROCINADORES -->
+    <footer class="bento-card sponsors-section">
+        <p class="sponsors-title">Organizan y Patrocinan</p>
+        <div class="sponsors-grid">
+            <img src="up.jpg" alt="Universidad de Panamá" class="sponsor-logo">
+            <img src="Escuela de Fisica.jpeg" alt="Escuela de Física" class="sponsor-logo">
+            <img src="Facultad.jpeg" alt="Facultad de Ciencias" class="sponsor-logo">
+            <img src="APAA.jpeg" alt="APAA" class="sponsor-logo">
+            <img src="Astronomiyastrofi.jpeg" alt="Astronomía y Astrofísica" class="sponsor-logo">
+            <img src="Captura de pantalla 2026-09-19 023533.png" alt="100 Hours of Astronomy" class="sponsor-logo">
+        </div>
+        <p class="copyright-text">© 2026 - 100 Horas de Astronomía. Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- JS Principal de Actividades -->
+    <script src="Actividades.js"></script>
+</body>
+</html>

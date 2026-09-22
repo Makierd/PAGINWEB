@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Organización - 100 Horas de Astronomía</title>
+    
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/png" href="Captura de pantalla 2026-09-19 023533.png">
+    
+    <!-- Hojas de Estilo -->
+    <link rel="stylesheet" href="Organi.css">
+    
+    <!-- Librería FontAwesome para iconos de flechas y navegación -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Three.js CDN -->
+     <script src="controljs.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+</head>
+
+<body>
+
+   <!-- NAV / MENÚ DE NAVEGACIÓN FLOTANTE BENTO GLASS -->
+  <header class="glass-navigation">
+    <nav class="bento-card nav-card">
+      <ul class="menu">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="Evento.html">Evento</a></li>
+        <li><a href="Programa.html">Programa</a></li>
+        <li><a href="Conferencia.html">Conferencias e Invitados</a></li>
+        <li><a href="Actividades.html">Actividades</a></li>
+        <li><a href="Organizacion.html" class="active">Organización</a></li>
+        <li><a href="ServicioSocial.html">Servicio Social</a></li>
+      </ul>
+    </nav>
+  </header>
+
+    <!-- CONTENIDO PRINCIPAL: ORGANIZACIÓN ORBITAL -->
+    <main class="org-container">
+        
+        <!-- ENCABEZADO INSTITUCIONAL -->
+        <section class="org-intro text-center">
+
+    <!-- LOGOS INSTITUCIONALES (SOLO UP, FACULTAD Y FÍSICA) -->
+    <div class="institutional-logos-wrapper">
+        <div class="institutional-logos-flex">
+            <img src="up.jpg" alt="Universidad de Panamá" class="inst-logo" title="Universidad de Panamá">
+            <img src="Facultad.jpeg" alt="Facultad de Ciencias Naturales, Exactas y Tecnología" class="inst-logo" title="Facultad de Ciencias">
+            <img src="Escuela de Fisica.jpeg" alt="Escuela y Departamento de Física" class="inst-logo" title="Escuela y Departamento de Física">
+        </div>
+    </div>
+
+    <!-- TEXTOS OFICIALES -->
+    <p class="institution-sub">Universidad de Panamá</p>
+    <p class="faculty-sub">Facultad de Ciencias Naturales, Exactas y Tecnología</p>
+    <p class="dept-sub">Escuela de Física & Departamento de Física</p>
+    
+    <h1 class="section-title">Comité Organizador & Coordinadores</h1>
+</section>
+
+        <!-- SECCIÓN DEL SLIDER ORBITAL 3D -->
+        <section class="orbital-slider-wrapper">
+            
+            <!-- Botón Izquierdo / Flecha Anterior -->
+            <button class="orbit-arrow prev-arrow" id="prevBtn" aria-label="Anterior">
+                <i class="fa-solid fa-chevron-left"></i>
+            </button>
+
+            <!-- Escenario 3D y Contenedor de Perfiles Circulares -->
+            <div class="orbital-stage" id="orbitalStage">
+                
+                <!-- Canvas 3D para la Órbita visual de fondo (Three.js) -->
+                <canvas id="orbit-canvas"></canvas>
+
+                <!-- Tarjetas Circulares de Responsables (Inyectadas o Maquetadas) -->
+                <div class="orbit-cards-container" id="orbitCardsContainer">
+                    
+                    <!-- Ejemplo de Tarjeta Circular 1 (Responsable / Coordinador) -->
+                    <div class="orbit-node active" data-index="0">
+                        <div class="circle-avatar-frame">
+                            <img src="avatar1.jpg" alt="Coordinador General" class="circle-avatar">
+                        </div>
+                        <div class="node-info">
+                            <h3>Dr. Nombre del Coordinador</h3>
+                            <span class="role-badge">Coordinador General</span>
+                            <p class="dept-tag">Departamento de Física</p>
+                        </div>
+                    </div>
+
+                    <!-- Ejemplo de Tarjeta Circular 2 -->
+                    <div class="orbit-node" data-index="1">
+                        <div class="circle-avatar-frame">
+                            <img src="avatar2.jpg" alt="Organizador Logística" class="circle-avatar">
+                        </div>
+                        <div class="node-info">
+                            <h3>Lic. Nombre Organizador</h3>
+                            <span class="role-badge">Comité de Logística</span>
+                            <p class="dept-tag">Escuela de Física</p>
+                        </div>
+                    </div>
+
+                    <!-- Ejemplo de Tarjeta Circular 3 -->
+                    <div class="orbit-node" data-index="2">
+                        <div class="circle-avatar-frame">
+                            <img src="avatar3.jpg" alt="Coordinador Científico" class="circle-avatar">
+                        </div>
+                        <div class="node-info">
+                            <h3>Dra. Nombre Profesora</h3>
+                            <span class="role-badge">Comité Científico</span>
+                            <p class="dept-tag">Facultad de Ciencias</p>
+                        </div>
+                    </div>
+                    <!-- Encargado 4 -->
+<div class="orbit-node" data-index="3">
+    <div class="circle-avatar-frame">
+        <img src="avatar4.jpg" alt="Nombre" class="circle-avatar">
+    </div>
+    <div class="node-info">
+        <h3>Lic. Cuarto Encargado</h3>
+        <span class="role-badge">Comité de Divulgación</span>
+        <p class="dept-tag">Escuela de Física</p>
+    </div>
+</div>
+
+<!-- Encargado 5 -->
+<div class="orbit-node" data-index="4">
+    <div class="circle-avatar-frame">
+        <img src="avatar5.jpg" alt="Nombre" class="circle-avatar">
+    </div>
+    <div class="node-info">
+        <h3>Dr. Quinto Encargado</h3>
+        <span class="role-badge">Coordinador de Taller</span>
+        <p class="dept-tag">Departamento de Física</p>
+    </div>
+</div>
+                </div>
+            </div>
+
+            <!-- Botón Derecho / Flecha Siguiente -->
+            <button class="orbit-arrow next-arrow" id="nextBtn" aria-label="Siguiente">
+                <i class="fa-solid fa-chevron-right"></i>
+            </button>
+
+        </section>
+
+    </main>
+
+    <!-- PIE DE PÁGINA / PATROCINADORES (Responsive Scroll Horizontal para Celular) -->
+    <footer class="bento-card sponsors-section">
+        <p class="sponsors-title">Organizan y Patrocinan</p>
+        
+        <!-- Tira limpia de logos que en móvil permite Swipe/Scroll horizontal dinámico -->
+        <div class="sponsors-scroll-wrapper">
+            <div class="sponsors-grid">
+                <img src="up.jpg" alt="Universidad de Panamá" class="sponsor-logo">
+                <img src="Escuela de Fisica.jpeg" alt="Escuela de Física" class="sponsor-logo">
+                <img src="Facultad.jpeg" alt="Facultad de Ciencias" class="sponsor-logo">
+                <img src="APAA.jpeg" alt="APAA" class="sponsor-logo">
+                <img src="Astronomiyastrofi.jpeg" alt="Astronomía y Astrofísica" class="sponsor-logo">
+                <img src="Captura de pantalla 2026-09-19 023533.png" alt="100 Hours of Astronomy" class="sponsor-logo">
+            </div>
+        </div>
+        
+        <p class="copyright-text">© 2026 - 100 Horas de Astronomía. Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- SCRIPTS DE JAVASCRIPT -->
+    
+    <script src="Organi.js"></script>
+</body>
+
+</html>

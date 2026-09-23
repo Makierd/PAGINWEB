@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servicio Social - 100 Horas de Astronomía</title>
+    
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/png" href="Captura de pantalla 2026-09-19 023533.png">
+    
+    <!-- Hojas de Estilo -->
+    <link rel="stylesheet" href="Serviciosocial.css">
+    
+    <!-- Librería FontAwesome para iconos de carpetas y archivos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Scripts de Control -->
+    <script src="controljs.js"></script>
+
+   
+</head>
+
+<body>
+    <canvas id="gravity-canvas"></canvas>
+
+    <!-- NAV / MENÚ DE NAVEGACIÓN -->
+    <header class="glass-header">
+        <nav class="glass-nav">
+            <a href="index.html" class="nav-item">Inicio</a>
+            <a href="Evento.html" class="nav-item">Evento</a>
+            <a href="Programa.html" class="nav-item">Programa</a>
+            <a href="Conferencia.html" class="nav-item">Conferencias e Invitados</a>
+            <a href="Actividades.html" class="nav-item">Actividades</a>
+            <a href="Organizacion.html" class="nav-item">Organización</a>
+            <a href="ServicioSocial.html" class="nav-item active">Servicio Social</a>
+        </nav>
+    </header>
+
+    <!-- ARCHIVADOR DIGITAL -->
+    <main class="main-content">
+        <div class="archive-header">
+            <h1 class="page-title"><i class="fa-solid fa-folder-closed icon-folder-title"></i> Servicio Social</h1>
+            <p class="page-subtitle">Expedientes oficiales de acreditación (100 Horas de Astronomía)</p>
+        </div>
+
+        <!-- Mueble Archivador con carpetas -->
+        <div id="cabinet-grid" class="cabinet-grid">
+            <!-- JavaScript inyectará las 10 carpetas/expedientes aquí -->
+        </div>
+    </main>
+
+    <!-- MODAL DE EXPEDIENTE (VISOR DE ARCHIVO) -->
+    <div id="file-modal" class="modal-overlay" style="display: none;">
+        <div class="file-dossier">
+            <button class="modal-close-btn" onclick="closeFileModal()">&times;</button>
+            <div id="file-modal-body"></div>
+        </div>
+    </div>
+
+    <!-- PIE DE PÁGINA / PATROCINADORES -->
+    <footer class="bento-card sponsors-section">
+        <p class="sponsors-title">Organizan y Patrocinan</p>
+        <div class="sponsors-grid">
+            <img src="up.jpg" alt="Universidad de Panamá" class="sponsor-logo">
+            <img src="Escuela de Fisica.jpeg" alt="Escuela de Física" class="sponsor-logo">
+            <img src="Facultad.jpeg" alt="Facultad de Ciencias" class="sponsor-logo">
+            <img src="APAA.jpeg" alt="APAA" class="sponsor-logo">
+            <img src="Astronomiyastrofi.jpeg" alt="Astronomía y Astrofísica" class="sponsor-logo">
+            <img src="Captura de pantalla 2026-09-19 023533.png" alt="100 Hours of Astronomy" class="sponsor-logo">
+        </div>
+        <p class="copyright-text">© 2026 - 100 Horas de Astronomía. Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- JS Principal de Servicio Social -->
+    <script src="Serviciosocial.js"></script>
+</body>
+</html>

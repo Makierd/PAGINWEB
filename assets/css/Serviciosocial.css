@@ -1,0 +1,791 @@
+/* Contenedor del fondo Vanta */
+#vanta-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1; /* Se posiciona detrás de todo el contenido */
+    pointer-events: none;
+}
+
+/* Asegurar que la página tenga el fondo oscuro base */
+body {
+    background-color: #030712;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.main-content {
+    flex: 1;
+    padding: 120px 20px 40px 20px; /* Espacio para no chocar con el header */
+}
+/* Grid de Tarjetas */
+.bento-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* Tarjeta Bento de Servicio Social */
+.social-card {
+    position: relative;
+    padding: 24px;
+    background: rgba(15, 23, 42, 0.75);
+    border: 1px solid rgba(56, 189, 248, 0.2);
+    backdrop-filter: blur(12px);
+    border-radius: 16px;
+}
+
+.badge-horas {
+    position: absolute;
+    top: 18px;
+    right: 18px;
+    background: rgba(56, 189, 248, 0.15);
+    color: #38bdf8;
+    border: 1px solid rgba(56, 189, 248, 0.4);
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: bold;
+}
+
+.student-name {
+    font-size: 1.5rem;
+    color: #fff;
+    margin: 0 0 4px 0;
+}
+
+.student-career {
+    color: #38bdf8;
+    font-size: 0.9rem;
+    margin-bottom: 16px;
+}
+
+.project-title {
+    color: #e2e8f0;
+    margin-bottom: 8px;
+}
+
+.project-summary {
+    color: #94a3b8;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.btn-detalles {
+    width: 100%;
+    padding: 10px;
+    background: #38bdf8;
+    color: #0f172a;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.btn-detalles:hover {
+    background: #0284c7;
+    color: #fff;
+}
+/* ==========================================
+   1. RESETS & ESTILOS BASE
+   ========================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #030712;
+  color: #f8fafc;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+/* Fondo de Vanta.js (Red 3D) */
+#vanta-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* Contenedor Principal */
+.main-content {
+  flex: 1;
+  padding: 110px 20px 40px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.page-title {
+  text-align: center;
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 8px;
+  text-shadow: 0 0 20px rgba(56, 189, 248, 0.3);
+}
+
+.page-subtitle {
+  text-align: center;
+  color: #94a3b8;
+  font-size: 1rem;
+  margin-bottom: 40px;
+}
+
+/* ==========================================
+   2. BENTO GRID & TARJETAS DE ESTUDIANTES
+   ========================================== */
+.bento-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 24px;
+  width: 100%;
+}
+
+.bento-card {
+  background: rgba(15, 23, 42, 0.7);
+  border: 1px solid rgba(56, 189, 248, 0.25);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-radius: 20px;
+  padding: 28px;
+  position: relative;
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+}
+
+.bento-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(56, 189, 248, 0.6);
+  box-shadow: 0 15px 35px -10px rgba(56, 189, 248, 0.25);
+}
+
+/* Badge de Horas */
+.badge-horas {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: rgba(56, 189, 248, 0.15);
+  color: #38bdf8;
+  border: 1px solid rgba(56, 189, 248, 0.4);
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.student-name {
+  font-size: 1.6rem;
+  color: #ffffff;
+  margin-bottom: 4px;
+}
+
+.student-career {
+  color: #38bdf8;
+  font-size: 0.88rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  display: block;
+}
+
+.project-title {
+  color: #e2e8f0;
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+}
+
+.project-summary {
+  color: #94a3b8;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 24px;
+}
+
+/* Botón de Detalles */
+.btn-detalles {
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(135deg, #0284c7, #38bdf8);
+  color: #0f172a;
+  border: none;
+  border-radius: 12px;
+  font-weight: 700;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(56, 189, 248, 0.3);
+}
+
+.btn-detalles:hover {
+  background: linear-gradient(135deg, #38bdf8, #7dd3fc);
+  transform: scale(1.02);
+  color: #000;
+}
+
+/* ==========================================
+   3. MODAL DE EVIDENCIAS Y DETALLES
+   ========================================== */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(2, 6, 23, 0.85);
+  backdrop-filter: blur(8px);
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.modal-content {
+  max-width: 600px;
+  width: 100%;
+  max-height: 85vh;
+  overflow-y: auto;
+  position: relative;
+  border: 1px solid rgba(56, 189, 248, 0.4);
+}
+
+.modal-close-btn {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  background: transparent;
+  border: none;
+  color: #94a3b8;
+  font-size: 2rem;
+  cursor: pointer;
+  line-height: 1;
+  transition: color 0.2s;
+}
+
+.modal-close-btn:hover {
+  color: #38bdf8;
+}
+
+/* ==========================================
+   4. FOOTER & PATROCINADORES
+   ========================================== */
+.sponsors-section {
+  margin: 40px auto 20px auto;
+  width: 90%;
+  max-width: 1100px;
+  text-align: center;
+}
+
+.sponsors-title {
+  color: #94a3b8;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+}
+
+.sponsors-grid {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+  margin-bottom: 20px;
+}
+
+.sponsor-logo {
+  height: 45px;
+  width: auto;
+  object-fit: contain;
+  filter: grayscale(30%) opacity(0.8);
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.sponsor-logo:hover {
+  filter: grayscale(0%) opacity(1);
+  transform: scale(1.08);
+}
+
+.copyright-text {
+  color: #64748b;
+  font-size: 0.8rem;
+  margin-top: 15px;
+}
+/* ==========================================
+   1. RESETS & ESTILOS GENERALES
+   ========================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+}
+
+body {
+  background-color: #030712;
+  color: #f8fafc;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+#vanta-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* Header Flotante con Hover Neón */
+.glass-header {
+  position: fixed;
+  top: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+  width: 90%;
+  max-width: 1050px;
+}
+
+.glass-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 8px 16px;
+  background: rgba(10, 15, 30, 0.65);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+.glass-nav::-webkit-scrollbar { display: none; }
+.glass-nav { -ms-overflow-style: none; scrollbar-width: none; }
+
+.nav-item {
+  color: #94a3b8;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+  padding: 8px 18px;
+  border-radius: 12px;
+  border: 1px solid transparent;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  display: inline-block;
+}
+
+.nav-item:hover {
+  color: #38bdf8;
+  background: rgba(14, 116, 144, 0.35);
+  border-color: rgba(56, 189, 248, 0.4);
+  box-shadow: 0 0 15px rgba(56, 189, 248, 0.4), inset 0 0 10px rgba(56, 189, 248, 0.2);
+  transform: translateY(-1px);
+}
+
+.nav-item.active {
+  color: #ffffff;
+  font-weight: 600;
+}
+
+/* ==========================================
+   2. SECCIÓN ARCHIVADOR DIGITAL
+   ========================================== */
+.main-content {
+  flex: 1;
+  padding: 120px 20px 40px 20px;
+  max-width: 1250px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.archive-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.page-title {
+  font-size: 2.3rem;
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: 8px;
+  text-shadow: 0 0 25px rgba(56, 189, 248, 0.4);
+}
+
+.icon-folder-title {
+  color: #38bdf8;
+  margin-right: 10px;
+}
+
+.page-subtitle {
+  color: #94a3b8;
+  font-size: 1.05rem;
+}
+
+/* GRID DE MUEBLE ARCHIVADOR */
+.cabinet-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 30px;
+  width: 100%;
+}
+
+/* CONTENEDOR TIPO CARPETA DE EXPEDIENTE */
+.folder-card {
+  position: relative;
+  background: rgba(15, 23, 42, 0.85);
+  border: 1px solid rgba(56, 189, 248, 0.3);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-radius: 0 18px 18px 18px;
+  padding: 28px 24px 22px 24px;
+  margin-top: 15px; /* Espacio para la pestaña */
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+  cursor: pointer;
+}
+
+/* PESTAÑA DEL ARCHIVADOR (TAB ARRIBA A LA IZQUIERDA) */
+.folder-card::before {
+  content: '';
+  position: absolute;
+  top: -16px;
+  left: -1px;
+  width: 140px;
+  height: 16px;
+  background: rgba(15, 23, 42, 0.85);
+  border-top: 1px solid rgba(56, 189, 248, 0.3);
+  border-left: 1px solid rgba(56, 189, 248, 0.3);
+  border-right: 1px solid rgba(56, 189, 248, 0.3);
+  border-radius: 12px 12px 0 0;
+  backdrop-filter: blur(16px);
+}
+
+/* EFECTO HOVER DE CARPETA SEPARÁNDOSE */
+.folder-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  border-color: rgba(56, 189, 248, 0.8);
+  box-shadow: 0 18px 40px rgba(56, 189, 248, 0.2);
+}
+
+.folder-card:hover::before {
+  border-color: rgba(56, 189, 248, 0.8);
+  background: rgba(14, 116, 144, 0.4);
+}
+
+/* ETIQUETA / ID DE EXPEDIENTE EN LA PESTAÑA */
+.folder-tab-label {
+  position: absolute;
+  top: -14px;
+  left: 12px;
+  font-size: 0.72rem;
+  font-weight: 800;
+  color: #38bdf8;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  z-index: 2;
+}
+
+/* BADGE DE ACREDITACIÓN (100H) */
+.folder-badge {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  background: rgba(56, 189, 248, 0.15);
+  color: #38bdf8;
+  border: 1px solid rgba(56, 189, 248, 0.4);
+  padding: 4px 10px;
+  border-radius: 8px;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.student-name {
+  font-size: 1.45rem;
+  color: #ffffff;
+  font-weight: 700;
+  margin-bottom: 4px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.student-name i {
+  color: #38bdf8;
+  font-size: 1.1rem;
+}
+
+.student-role {
+  color: #94a3b8;
+  font-size: 0.88rem;
+  font-weight: 500;
+  margin-bottom: 16px;
+  display: block;
+}
+
+.folder-divider {
+  height: 1px;
+  background: linear-gradient(90deg, rgba(56, 189, 248, 0.3), transparent);
+  margin-bottom: 15px;
+}
+
+.project-title {
+  color: #e2e8f0;
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.project-desc {
+  color: #64748b;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin-bottom: 20px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* BOTÓN DE APERTURA */
+.btn-open-folder {
+  width: 100%;
+  padding: 10px;
+  background: rgba(56, 189, 248, 0.1);
+  color: #38bdf8;
+  border: 1px solid rgba(56, 189, 248, 0.4);
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 0.9rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: all 0.25s ease;
+}
+
+.btn-open-folder:hover {
+  background: #38bdf8;
+  color: #0f172a;
+  box-shadow: 0 0 15px rgba(56, 189, 248, 0.4);
+}
+
+/* ==========================================
+   3. MODAL DE EXPEDIENTE/HOJA DE REPORTE
+   ========================================== */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(2, 6, 23, 0.85);
+  backdrop-filter: blur(10px);
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.file-dossier {
+  background: rgba(15, 23, 42, 0.95);
+  border: 1px solid rgba(56, 189, 248, 0.5);
+  border-radius: 20px;
+  max-width: 650px;
+  width: 100%;
+  max-height: 88vh;
+  overflow-y: auto;
+  position: relative;
+  padding: 35px 30px;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.8);
+}
+
+.modal-close-btn {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  background: transparent;
+  border: none;
+  color: #94a3b8;
+  font-size: 2.2rem;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.modal-close-btn:hover {
+  color: #38bdf8;
+}
+
+/* ==========================================
+   4. FOOTER Y PATROCINADORES
+   ========================================== */
+.sponsors-section {
+  margin: 50px auto 20px auto;
+  width: 90%;
+  max-width: 1100px;
+  text-align: center;
+  background: rgba(15, 23, 42, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(12px);
+  border-radius: 20px;
+  padding: 25px;
+}
+
+.sponsors-title {
+  color: #94a3b8;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-bottom: 20px;
+}
+
+.sponsors-grid {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+  margin-bottom: 15px;
+}
+
+.sponsor-logo {
+  height: 42px;
+  width: auto;
+  object-fit: contain;
+  filter: grayscale(30%) opacity(0.85);
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.sponsor-logo:hover {
+  filter: grayscale(0%) opacity(1);
+  transform: scale(1.08);
+}
+
+.copyright-text {
+  color: #64748b;
+  font-size: 0.8rem;
+  margin-top: 15px;
+}
+
+/* ==========================================
+   CAMBIO A CUADRO Y AJUSTE DE ESPACIO EN MOVIL
+   ========================================== */
+@media (max-width: 768px) {
+  /* Empuja el contenido principal hacia abajo para que no choque */
+  .main-content {
+    padding-top: 210px !important; 
+  }
+
+  .glass-header {
+    width: 92%;
+    max-width: 480px;
+    top: 10px;
+  }
+
+  .glass-nav {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px 12px;
+    padding: 14px 16px;
+    border-radius: 24px;
+    white-space: normal;
+    overflow-x: visible;
+  }
+
+  .nav-item {
+    font-size: 0.85rem;
+    padding: 6px 12px;
+  }
+}
+
+/* ==========================================
+   CANVAS DE ÓRBITAS Y ONDAS GRAVITACIONALES
+   ========================================== */
+#gravity-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  pointer-events: none;
+  background: radial-gradient(circle at center, #0b132b 0%, #030712 100%);
+}
+
+/* --- ESTILOS DE EVIDENCIAS EN EL MODAL --- */
+
+/* Ajuste de contenedor del modal para permitir desplazamiento si el archivo es grande */
+#file-modal-body {
+  max-height: 80vh;
+  overflow-y: auto;
+  padding-right: 8px;
+}
+
+/* Personalización de barra de scroll para el modal */
+#file-modal-body::-webkit-scrollbar {
+  width: 6px;
+}
+#file-modal-body::-webkit-scrollbar-thumb {
+  background: rgba(56, 189, 248, 0.4);
+  border-radius: 4px;
+}
+
+/* Reproductor de Video */
+video {
+  max-height: 350px;
+  object-fit: contain;
+  outline: none;
+}
+
+/* Visor de Documentos (PDF / PPT) */
+iframe {
+  background: #0f172a;
+  transition: border-color 0.3s ease;
+}
+
+iframe:hover {
+  border-color: rgba(56, 189, 248, 0.6) !important;
+}
+
+/* Adaptación para pantallas de teléfonos */
+@media (max-width: 600px) {
+  iframe {
+    height: 200px !important; /* Reduce la altura en móviles para que no ocupe toda la pantalla */
+  }
+  
+  #file-modal-body {
+    padding: 15px !important;
+  }
+}

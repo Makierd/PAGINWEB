@@ -1,10 +1,51 @@
-Fotografías de conferencistas y participantes.
+Fotografías de conferencistas y participantes
+=============================================
 
-Mientras no se reciba la fotografía oficial de una persona, su tarjeta
-usa foto-pendiente.svg como marcador. Para colocar una foto real:
+Cada tarjeta de Conferencia.html ya busca su foto por nombre de archivo.
+Mientras el archivo no exista, la tarjeta muestra foto-pendiente.svg.
+Basta con dejar aquí la foto con el nombre exacto y recargar la página.
 
-  1. Guardar la imagen aquí (recorte cuadrado, idealmente 400x400).
-  2. En Conferencia.html, cambiar el src de esa tarjeta por el archivo.
+Formato: JPG, cuadrada, 400x400. Para prepararla automáticamente:
+
+    ./herramientas/preparar-foto.sh <foto-original> <nombre-archivo> [zona]
+    ./herramientas/preparar-foto.sh ~/Downloads/kenia.jpg kenia-rodriguez north
+
+NOMBRES DE ARCHIVO ESPERADOS
+----------------------------
+
+Conferencias presenciales — jueves 1 de octubre
+    kenia-rodriguez.jpg       Mgtr. Kenia Rodríguez
+    ramiro-villarreal.jpg     Mgtr. Ramiro Villarreal
+    luis-marin.jpg            Mgtr. Luis Marín
+    reina-rodriguez.jpg       Lic. Reina Beatriz Rodríguez Rodríguez
+    manuel-chacon.jpg         Dr. Manuel Alejandro Chacón
+    pablo-weigandt.jpg        Dr. Pablo Martín Weigandt Beckmann
+    carlos-fernandez.jpg      MSc. Carlos Fernández
+    daniel-sega.jpg           Dr. Daniel Sega
+    rodney-delgado.jpg        Dr. Rodney Delgado-Serrano
+
+Conversatorio — viernes 2 de octubre
+    eduardo-camacho.jpg       Dr. Eduardo Camacho
+    madelaine-rojas.jpg       Dra. Madelaine Rojas
+    adams-martinez.jpg        Prof. Adams Martínez
+    yaris-rodriguez.jpg       Prof. Yaris Rodríguez
+
+Foro estudiantil — viernes 2 de octubre
+    naddia-mclean.jpg         Naddia McLean
+    orlando-lopez.jpg         Orlando López
+    ivy-janssen.jpg           Ivy Janssen
+
+Conferencias virtuales — sábado 3 de octubre
+    augusto-bouras.jpg        Mgtr. Augusto Bouras Moreno Sánchez
+    galymzhan-baltabay.jpg    Mgtr. Galymzhan Baltabay
+    shayan-fathikoohi.jpg     Mgtr. Shayan Fathikoohi
+    marcel-popescu.jpg        Dr. Marcel Popescu
+    ivan-stankovich.jpg       Mgtr. Ivan Stankovich
+
+Astrofotografía — domingo 4 de octubre
+    didhier-montenegro.jpg    Didhier Montenegro
+    francisco-nunez.jpg       Francisco Núñez P.
+    jesus-vargas.jpg          Jesús Mario Vargas
 
 Indicación del Comité Organizador: si falta una fotografía o una reseña
 oficial, no inventar información; dejar el espacio preparado.

@@ -1,21 +1,12 @@
-// Función para intercambiar pestañas (Nacionales vs Internacionales)
+// Intercambia pestañas de actividad. Funciona con cualquier numero de
+// pestañas: cada .tab-card usa id "tab-<clave>" y su bloque "group-<clave>".
 function switchSpeakerTab(target) {
-    const tabNac = document.getElementById('tab-nacionales');
-    const tabInt = document.getElementById('tab-internacionales');
-    const groupNac = document.getElementById('group-nacionales');
-    const groupInt = document.getElementById('group-internacionales');
-
-    if (target === 'nacionales') {
-        tabNac.classList.add('active');
-        tabInt.classList.remove('active');
-        groupNac.classList.add('active-group');
-        groupInt.classList.remove('active-group');
-    } else {
-        tabInt.classList.add('active');
-        tabNac.classList.remove('active');
-        groupInt.classList.add('active-group');
-        groupNac.classList.remove('active-group');
-    }
+    document.querySelectorAll('.tab-card').forEach(function (tab) {
+        tab.classList.toggle('active', tab.id === 'tab-' + target);
+    });
+    document.querySelectorAll('.speaker-group').forEach(function (grupo) {
+        grupo.classList.toggle('active-group', grupo.id === 'group-' + target);
+    });
 }
 
 // Función genérica para abrir y cerrar acordeones de evidencia

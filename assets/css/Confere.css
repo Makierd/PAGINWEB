@@ -113,59 +113,55 @@ body {
     margin-bottom: 2rem;
 }
 
-/* Selector Superpuesto (Nacionales vs Internacionales) */
+/* Selector de actividad (una pestaña por jornada) */
 .tab-cards-container {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
-    position: relative;
+    align-items: stretch;
+    gap: 14px;
     margin-bottom: 35px;
-    min-height: 110px;
 }
 
 .tab-card {
-    width: 45%;
-    max-width: 420px;
-    background: rgba(30, 41, 59, 0.7);
+    flex: 1 1 250px;
+    max-width: 320px;
+    background: rgba(15, 23, 42, 0.8);
     backdrop-filter: blur(12px);
     border: 1px solid rgba(255, 255, 255, 0.15);
     border-radius: 16px;
-    padding: 16px 20px;
+    padding: 14px 18px;
     cursor: pointer;
-    position: absolute;
-    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+    opacity: 0.6;
+    transform: scale(0.97);
+    transition: all 0.35s cubic-bezier(0.25, 0.8, 0.25, 1);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
 }
 
-#tab-nacionales {
-    left: 8%;
-    z-index: 2;
+.tab-card:hover {
+    opacity: 0.85;
 }
 
-#tab-internacionales {
-    right: 8%;
-    z-index: 1;
-    transform: scale(0.92) translateY(8px);
-    opacity: 0.6;
-    background: rgba(15, 23, 42, 0.8);
-}
-
-#tab-nacionales.active,
-#tab-internacionales.active {
-    z-index: 3;
-    transform: scale(1.02);
+.tab-card.active {
     opacity: 1;
+    transform: scale(1);
     border-color: #38bdf8;
-    box-shadow: 0 0 25px rgba(56, 189, 248, 0.35);
     background: rgba(30, 41, 59, 0.9);
+    box-shadow: 0 0 25px rgba(56, 189, 248, 0.35);
 }
 
-#tab-nacionales:not(.active),
-#tab-internacionales:not(.active) {
-    z-index: 1;
-    transform: scale(0.92) translateY(8px);
-    opacity: 0.6;
-    background: rgba(15, 23, 42, 0.8);
+/* Icono de la pestaña, en lugar de la bandera */
+.tab-icon {
+    width: 38px;
+    height: 38px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    background: rgba(56, 189, 248, 0.15);
+    color: #38bdf8;
+    font-size: 1.05rem;
 }
 
 .tab-card-content {
@@ -351,6 +347,60 @@ body {
     flex-grow: 1;
 }
 
+/* Titulo de la actividad, sobre la rejilla de un grupo */
+.grupo-actividad {
+    text-align: center;
+    color: #cbd5e1;
+    font-size: 0.92rem;
+    margin-bottom: 22px;
+}
+
+.grupo-actividad i {
+    color: #fdba74;
+    margin-right: 6px;
+}
+
+.grupo-actividad strong {
+    color: #ffffff;
+}
+
+/* Aviso de informacion pendiente de confirmacion oficial */
+.speaker-nota {
+    font-size: 0.78rem;
+    color: #94a3b8;
+    font-style: italic;
+    border-top: 1px dashed rgba(255, 255, 255, 0.12);
+    padding-top: 10px;
+    margin-top: 4px;
+}
+
+.speaker-nota i {
+    color: #fdba74;
+    margin-right: 5px;
+}
+
+/* Boton "Conoce su proyecto" (jornada de astrofotografia) */
+.proyecto-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    align-self: flex-start;
+    margin-top: auto;
+    background: linear-gradient(135deg, #38bdf8, #0284c7);
+    color: #ffffff;
+    padding: 9px 18px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.proyecto-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 18px rgba(56, 189, 248, 0.6);
+}
+
 /* Botón Acordeón */
 .accordion-btn {
     width: 100%;
@@ -441,19 +491,17 @@ body {
 @media (max-width: 768px) {
     .tab-cards-container {
         flex-direction: column;
-        height: auto;
         gap: 12px;
-        min-height: auto;
     }
 
     .tab-card {
-        position: relative;
         width: 100%;
         max-width: 100%;
-        left: auto !important;
-        right: auto !important;
-        transform: none !important;
-        opacity: 1 !important;
+        transform: none;
+    }
+
+    .tab-card.active {
+        transform: none;
     }
 }
 

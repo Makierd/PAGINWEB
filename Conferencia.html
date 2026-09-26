@@ -50,43 +50,67 @@
                     <p>Conoce a los expertos, investigadores y divulgadores que nos acompañan en las 100 Horas de Astronomía.</p>
                 </div>
 
-                <!-- Pestañas Superpuestas / Tarjetas Selección (Nacionales vs Internacionales) -->
+                <!-- Pestañas por actividad / jornada -->
                 <div class="tab-cards-container">
-                    <div class="tab-card active" id="tab-nacionales" onclick="switchSpeakerTab('nacionales')">
+                    <div class="tab-card active" id="tab-presenciales" onclick="switchSpeakerTab('presenciales')">
                         <div class="tab-card-content">
-                            <img src="https://flagcdn.com/w40/pa.png" alt="Panamá" class="tab-flag-icon">
+                            <span class="tab-icon"><i class="fas fa-chalkboard-user"></i></span>
                             <div class="tab-text">
-                                <h3>Conferencistas Nacionales</h3>
-                                <span><i class="fas fa-flag"></i> Panamá</span>
+                                <h3>Conferencias presenciales</h3>
+                                <span><i class="fas fa-calendar-day"></i> Jueves 1 de octubre</span>
                             </div>
                         </div>
                     </div>
 
-                    <div class="tab-card" id="tab-internacionales" onclick="switchSpeakerTab('internacionales')">
+                    <div class="tab-card" id="tab-conversatorio" onclick="switchSpeakerTab('conversatorio')">
                         <div class="tab-card-content">
-                            <div class="tab-flags-group">
-                                <img src="https://flagcdn.com/w40/ar.png" alt="Argentina" title="Argentina">
-                                <img src="https://flagcdn.com/w40/mx.png" alt="México" title="México">
-                                <img src="https://flagcdn.com/w40/kz.png" alt="Kazajistán" title="Kazajistán">
-                                <img src="https://flagcdn.com/w40/cl.png" alt="Chile" title="Chile">
-                            </div>
+                            <span class="tab-icon"><i class="fas fa-comments"></i></span>
                             <div class="tab-text">
-                                <h3>Conferencistas Internacionales</h3>
-                                <span><i class="fas fa-globe-americas"></i> Invitados Internacionales</span>
+                                <h3>Conversatorio</h3>
+                                <span><i class="fas fa-calendar-day"></i> Viernes 2 de octubre</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tab-card" id="tab-foro" onclick="switchSpeakerTab('foro')">
+                        <div class="tab-card-content">
+                            <span class="tab-icon"><i class="fas fa-users-rectangle"></i></span>
+                            <div class="tab-text">
+                                <h3>Foro estudiantil</h3>
+                                <span><i class="fas fa-calendar-day"></i> Viernes 2 de octubre</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tab-card" id="tab-virtuales" onclick="switchSpeakerTab('virtuales')">
+                        <div class="tab-card-content">
+                            <span class="tab-icon"><i class="fas fa-video"></i></span>
+                            <div class="tab-text">
+                                <h3>Conferencias virtuales</h3>
+                                <span><i class="fas fa-calendar-day"></i> Sábado 3 de octubre</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tab-card" id="tab-astrofotografia" onclick="switchSpeakerTab('astrofotografia')">
+                        <div class="tab-card-content">
+                            <span class="tab-icon"><i class="fas fa-camera-retro"></i></span>
+                            <div class="tab-text">
+                                <h3>Astrofotografía</h3>
+                                <span><i class="fas fa-calendar-day"></i> Domingo 4 de octubre</span>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- ================= BLOQUE NACIONALES ================= -->
-                <div id="group-nacionales" class="speaker-group active-group">
+                <!-- ============ CONFERENCIAS PRESENCIALES — Jueves 1 de octubre ============ -->
+                <div id="group-presenciales" class="speaker-group active-group">
                     <div class="speakers-grid">
 
-                        <!-- Ponente Nacional 1 -->
                         <article class="speaker-card">
                             <div class="speaker-card-header">
                                 <div class="speaker-photo-wrapper">
-                                    <img src="assets/img/logos/universidad-panama.png" alt="Mgtr. Luis Marín" class="speaker-photo zoomable-img">
+                                    <img src="assets/img/personas/foto-pendiente.svg" alt="Fotografía pendiente de Mgtr. Kenia Rodríguez" class="speaker-photo">
                                     <span class="country-badge" title="Panamá">
                                         <img src="https://flagcdn.com/w40/pa.png" alt="Panamá">
                                     </span>
@@ -94,394 +118,565 @@
                                 <div class="speaker-main-info">
                                     <h3 class="speaker-name">Mgtr. Kenia Rodríguez</h3>
                                     <p class="speaker-affiliation"><i class="fas fa-university"></i> Universidad de Panamá</p>
-                                    <span class="specialty-badge"><i class="fas fa-atom"></i> Por Completar...</span>
+                                    <span class="specialty-badge"><i class="fas fa-atom"></i> Divulgación científica</span>
                                 </div>
                             </div>
                             <div class="speaker-card-body">
                                 <div class="talk-info-box">
-                                    <span class="talk-label"><i class="fas fa-chalkboard-teacher"></i> Participación:</span>
-                                    <h4 class="talk-title-text">Conferencia: Trayectoria de las 100 Horas de Astronomía en Panamá</h4>
-                                    <h4 class="talk-title-text">Experimentos de Astronomía y observaciones diurnas</h4>
+                                    <span class="talk-label"><i class="fas fa-chalkboard-teacher"></i> Conferencia:</span>
+                                    <h4 class="talk-title-text">Trayectoria de las 100 Horas de Astronomía en Panamá</h4>
                                 </div>
-                                <p class="speaker-bio">
-                                   Por Completar...
-                                </p>
-
-                                <button type="button" class="accordion-btn" onclick="toggleEvidence('ev-spk-nac-1', this)">
-                                    <span><i class="fas fa-folder-open"></i> Ver Evidencias / Detalle</span>
-                                    <i class="fas fa-chevron-down arrow-icon"></i>
-                                </button>
-                                <div id="ev-spk-nac-1" class="accordion-content">
-                                    <div class="evidence-box">
-                                        <h5><i class="fas fa-file-alt"></i> Material y Recursos</h5>
-                                        <div class="evidence-links">
-                                            <a href="#" target="_blank" class="evidence-link"><i class="fas fa-file-pdf"></i> Reseña Completa (PDF)</a>
-                                        </div>
-                                    </div>
-                                </div>
+                                <p class="speaker-bio">Profesora de Física de la Universidad de Panamá. Participa en iniciativas académicas y de divulgación, y se desempeñó anteriormente como colaboradora en el Instituto de Geociencias de la Universidad de Panamá. Colaboradora por tercer año consecutivo de las 100 Horas de Astronomía, su intervención presentará el desarrollo y alcance de esta iniciativa en el contexto nacional.</p>
                             </div>
                         </article>
 
-                        <!-- Ponente Nacional 2 -->
                         <article class="speaker-card">
                             <div class="speaker-card-header">
                                 <div class="speaker-photo-wrapper">
-                                    <img src="assets/img/logos/universidad-panama.png" alt="Dr. Rodney Delgado-Serrano" class="speaker-photo zoomable-img">
+                                    <img src="assets/img/personas/foto-pendiente.svg" alt="Fotografía pendiente de Mgtr. Ramiro Villarreal" class="speaker-photo">
                                     <span class="country-badge" title="Panamá">
                                         <img src="https://flagcdn.com/w40/pa.png" alt="Panamá">
                                     </span>
                                 </div>
                                 <div class="speaker-main-info">
-                                    <h3 class="speaker-name">Mgtr. Ramiro Villareal</h3>
-                                    <p class="speaker-affiliation"><i class="fas fa-university"></i> Completar...</p>
-                                    <span class="specialty-badge"><i class="fas fa-star"></i> Completar...</span>
+                                    <h3 class="speaker-name">Mgtr. Ramiro Villarreal</h3>
+                                    <p class="speaker-affiliation"><i class="fas fa-university"></i> Universidad de Panamá</p>
+                                    
                                 </div>
                             </div>
                             <div class="speaker-card-body">
                                 <div class="talk-info-box">
-                                    <span class="talk-label"><i class="fas fa-chalkboard-teacher"></i> Participación:</span>
-                                    <h4 class="talk-title-text">Conferencia: Cerca del Horizonte de Eventos de un Agujero Negro de Schwarzchild</h4>
+                                    <span class="talk-label"><i class="fas fa-chalkboard-teacher"></i> Conferencia:</span>
+                                    <h4 class="talk-title-text">Cerca del Horizonte de Eventos de un Agujero Negro de Schwarzschild</h4>
                                 </div>
-                                <p class="speaker-bio">
-                                   Por completar...
-                                </p>
-
-                                <button type="button" class="accordion-btn" onclick="toggleEvidence('ev-spk-nac-2', this)">
-                                    <span><i class="fas fa-folder-open"></i> Ver Evidencias / Detalle</span>
-                                    <i class="fas fa-chevron-down arrow-icon"></i>
-                                </button>
-                                <div id="ev-spk-nac-2" class="accordion-content">
-                                    <div class="evidence-box">
-                                        <h5><i class="fas fa-file-alt"></i> Material y Recursos</h5>
-                                        <div class="evidence-links">
-                                            <a href="#" target="_blank" class="evidence-link"><i class="fas fa-file-pdf"></i> Presentación (PDF)</a>
-                                        </div>
-                                    </div>
-                                </div>
+                                <p class="speaker-bio">Profesor del Departamento de Física de la Universidad de Panamá, con experiencia en docencia universitaria y participación en actividades de formación científica. Su conferencia abordará conceptos de física gravitacional asociados con uno de los objetos más importantes de la relatividad.</p>
+                                <p class="speaker-nota"><i class="fas fa-circle-info"></i> Reseña biográfica oficial pendiente de confirmación.</p>
                             </div>
                         </article>
 
-                    <!-- Ponente Nacional 3 -->
                         <article class="speaker-card">
                             <div class="speaker-card-header">
                                 <div class="speaker-photo-wrapper">
-                                    <img src="assets/img/logos/universidad-panama.png" alt="Dr. Rodney Delgado-Serrano" class="speaker-photo zoomable-img">
-                                    <span class="country-badge" title="Panamá">
-                                        <img src="https://flagcdn.com/w40/pa.png" alt="Panamá">
-                                    </span>
-                                </div>
-                                <div class="speaker-main-info">
-                                    <h3 class="speaker-name">Dr. Rodney Delgado-Serrano</h3>
-                                    <p class="speaker-affiliation"><i class="fas fa-university"></i> Observatorio Astronómico de Panamá (UTP)</p>
-                                    <span class="specialty-badge"><i class="fas fa-star"></i> Astrofísica Observacional</span>
-                                </div>
-                            </div>
-                            <div class="speaker-card-body">
-                                <div class="talk-info-box">
-                                    <span class="talk-label"><i class="fas fa-chalkboard-teacher"></i> Participación:</span>
-                                    <h4 class="talk-title-text">Conferencia Magistral</h4>
-                                </div>
-                                <p class="speaker-bio">
-                                    Doctor en Astrofísica, destacado por su labor en investigación galáctica y por impulsar la astronomía a nivel académico e internacional en Panamá.
-                                </p>
-
-                                <button type="button" class="accordion-btn" onclick="toggleEvidence('ev-spk-nac-2', this)">
-                                    <span><i class="fas fa-folder-open"></i> Ver Evidencias / Detalle</span>
-                                    <i class="fas fa-chevron-down arrow-icon"></i>
-                                </button>
-                                <div id="ev-spk-nac-2" class="accordion-content">
-                                    <div class="evidence-box">
-                                        <h5><i class="fas fa-file-alt"></i> Material y Recursos</h5>
-                                        <div class="evidence-links">
-                                            <a href="#" target="_blank" class="evidence-link"><i class="fas fa-file-pdf"></i> Presentación (PDF)</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </article>
-                        
-                        <!-- Ponente Nacional 4 -->
-                        <article class="speaker-card">
-                            <div class="speaker-card-header">
-                                <div class="speaker-photo-wrapper">
-                                    <img src="assets/img/logos/universidad-panama.png" alt="Dr. Rodney Delgado-Serrano" class="speaker-photo zoomable-img">
+                                    <img src="assets/img/personas/foto-pendiente.svg" alt="Fotografía pendiente de Mgtr. Luis Marín" class="speaker-photo">
                                     <span class="country-badge" title="Panamá">
                                         <img src="https://flagcdn.com/w40/pa.png" alt="Panamá">
                                     </span>
                                 </div>
                                 <div class="speaker-main-info">
                                     <h3 class="speaker-name">Mgtr. Luis Marín</h3>
-                                    <p class="speaker-affiliation"><i class="fas fa-university"></i> Completar...</p>
-                                    <span class="specialty-badge"><i class="fas fa-star"></i> Completar...</span>
+                                    <p class="speaker-affiliation"><i class="fas fa-university"></i> Universidad de Panamá</p>
+                                    
                                 </div>
                             </div>
                             <div class="speaker-card-body">
                                 <div class="talk-info-box">
-                                    <span class="talk-label"><i class="fas fa-chalkboard-teacher"></i> Participación:</span>
-                                    <h4 class="talk-title-text">Gaia como Laboratorio Computacional: Datos, Algoritmos y Poblaciones Estelares</h4>
+                                    <span class="talk-label"><i class="fas fa-chalkboard-teacher"></i> Conferencia:</span>
+                                    <h4 class="talk-title-text">Gaia como laboratorio computacional: datos, algoritmos y poblaciones estelares</h4>
                                 </div>
-                                <p class="speaker-bio">
-                                   Por completar...
-                                </p>
+                                <p class="speaker-bio">Magíster y conferencista de la Universidad de Panamá. Su participación se centrará en el uso de grandes catálogos astronómicos y herramientas computacionales para analizar datos y propiedades de poblaciones estelares.</p>
+                                <p class="speaker-nota"><i class="fas fa-circle-info"></i> Reseña biográfica oficial pendiente de confirmación.</p>
+                            </div>
+                        </article>
 
-                                <button type="button" class="accordion-btn" onclick="toggleEvidence('ev-spk-nac-2', this)">
-                                    <span><i class="fas fa-folder-open"></i> Ver Evidencias / Detalle</span>
-                                    <i class="fas fa-chevron-down arrow-icon"></i>
-                                </button>
-                                <div id="ev-spk-nac-2" class="accordion-content">
-                                    <div class="evidence-box">
-                                        <h5><i class="fas fa-file-alt"></i> Material y Recursos</h5>
-                                        <div class="evidence-links">
-                                            <a href="#" target="_blank" class="evidence-link"><i class="fas fa-file-pdf"></i> Presentación (PDF)</a>
-                                        </div>
-                                    </div>
+                        <article class="speaker-card">
+                            <div class="speaker-card-header">
+                                <div class="speaker-photo-wrapper">
+                                    <img src="assets/img/personas/foto-pendiente.svg" alt="Fotografía pendiente de Lic. Reina Beatriz Rodríguez Rodríguez" class="speaker-photo">
+                                    <span class="country-badge" title="Panamá">
+                                        <img src="https://flagcdn.com/w40/pa.png" alt="Panamá">
+                                    </span>
                                 </div>
+                                <div class="speaker-main-info">
+                                    <h3 class="speaker-name">Lic. Reina Beatriz Rodríguez Rodríguez</h3>
+                                    <p class="speaker-affiliation"><i class="fas fa-university"></i> Universidad Tecnológica de Panamá</p>
+                                    <span class="specialty-badge"><i class="fas fa-atom"></i> Astrofísica observacional</span>
+                                </div>
+                            </div>
+                            <div class="speaker-card-body">
+                                <div class="talk-info-box">
+                                    <span class="talk-label"><i class="fas fa-chalkboard-teacher"></i> Conferencia:</span>
+                                    <h4 class="talk-title-text">Clasificación Morfológica de Galaxias</h4>
+                                </div>
+                                <p class="speaker-bio">Estudiante de la Maestría en Ciencias Físicas de la Universidad Tecnológica de Panamá. Su formación reciente incluye experiencia en astrofísica observacional, procesamiento de imágenes y análisis de datos extragalácticos. Su investigación de tesis se orienta a la clasificación morfológica de galaxias y durante el evento presentará avances de este trabajo.</p>
+                            </div>
+                        </article>
+
+                        <article class="speaker-card">
+                            <div class="speaker-card-header">
+                                <div class="speaker-photo-wrapper">
+                                    <img src="assets/img/personas/foto-pendiente.svg" alt="Fotografía pendiente de Dr. Manuel Alejandro Chacón" class="speaker-photo">
+                                    <span class="country-badge" title="Panamá">
+                                        <img src="https://flagcdn.com/w40/pa.png" alt="Panamá">
+                                    </span>
+                                </div>
+                                <div class="speaker-main-info">
+                                    <h3 class="speaker-name">Dr. Manuel Alejandro Chacón</h3>
+                                    <p class="speaker-affiliation"><i class="fas fa-university"></i> Universidad Tecnológica de Panamá</p>
+                                    <span class="specialty-badge"><i class="fas fa-atom"></i> Astronomía extragaláctica</span>
+                                </div>
+                            </div>
+                            <div class="speaker-card-body">
+                                <div class="talk-info-box">
+                                    <span class="talk-label"><i class="fas fa-chalkboard-teacher"></i> Conferencia:</span>
+                                    <h4 class="talk-title-text">Galaxias barradas: explorando la evolución de las galaxias a través del tiempo cósmico</h4>
+                                </div>
+                                <p class="speaker-bio">Doctor en Ciencias Físicas con especialidad en Astrofísica e investigador vinculado a la Dirección Nacional de Ciencias Espaciales de la UTP. Su trabajo se desarrolla principalmente en astronomía extragaláctica y evolución de galaxias, y también participa en iniciativas vinculadas con heliofísica y clima espacial.</p>
+                            </div>
+                        </article>
+
+                        <article class="speaker-card">
+                            <div class="speaker-card-header">
+                                <div class="speaker-photo-wrapper">
+                                    <img src="assets/img/personas/foto-pendiente.svg" alt="Fotografía pendiente de Dr. Pablo Martín Weigandt Beckmann" class="speaker-photo">
+                                    <span class="country-badge" title="Panamá">
+                                        <img src="https://flagcdn.com/w40/pa.png" alt="Panamá">
+                                    </span>
+                                </div>
+                                <div class="speaker-main-info">
+                                    <h3 class="speaker-name">Dr. Pablo Martín Weigandt Beckmann</h3>
+                                    <p class="speaker-affiliation"><i class="fas fa-university"></i> Universidad Autónoma de Chiriquí (UNACHI)</p>
+                                    <span class="specialty-badge"><i class="fas fa-atom"></i> Instrumentación astronómica</span>
+                                </div>
+                            </div>
+                            <div class="speaker-card-body">
+                                <div class="talk-info-box">
+                                    <span class="talk-label"><i class="fas fa-chalkboard-teacher"></i> Conferencia:</span>
+                                    <h4 class="talk-title-text">OAB: Tu Ventana al Cosmos</h4>
+                                </div>
+                                <p class="speaker-bio">Docente e investigador de la Universidad Autónoma de Chiriquí, vinculado al desarrollo de instrumentación y observación astronómica. Ha trabajado en proyectos de instrumentación orientados al estudio de objetos de bajo brillo superficial y participa en actividades de astronomía observacional y divulgación científica en Chiriquí.</p>
+                            </div>
+                        </article>
+
+                        <article class="speaker-card">
+                            <div class="speaker-card-header">
+                                <div class="speaker-photo-wrapper">
+                                    <img src="assets/img/personas/foto-pendiente.svg" alt="Fotografía pendiente de MSc. Carlos Fernández" class="speaker-photo">
+                                    <span class="country-badge" title="Panamá">
+                                        <img src="https://flagcdn.com/w40/pa.png" alt="Panamá">
+                                    </span>
+                                </div>
+                                <div class="speaker-main-info">
+                                    <h3 class="speaker-name">MSc. Carlos Fernández</h3>
+                                    <p class="speaker-affiliation"><i class="fas fa-university"></i> Universidad Latina de Panamá</p>
+                                    <span class="specialty-badge"><i class="fas fa-atom"></i> Robótica y automatización</span>
+                                </div>
+                            </div>
+                            <div class="speaker-card-body">
+                                <div class="talk-info-box">
+                                    <span class="talk-label"><i class="fas fa-chalkboard-teacher"></i> Conferencia:</span>
+                                    <h4 class="talk-title-text">Un Ingeniero en la Astronomía</h4>
+                                </div>
+                                <p class="speaker-bio">Profesor con experiencia en robótica, automatización, electrónica y aplicaciones de herramientas computacionales a problemas de astronomía. Su participación busca mostrar cómo la formación en ingeniería puede integrarse con instrumentación, automatización y proyectos de astronomía observacional.</p>
+                            </div>
+                        </article>
+
+                        <article class="speaker-card">
+                            <div class="speaker-card-header">
+                                <div class="speaker-photo-wrapper">
+                                    <img src="assets/img/personas/foto-pendiente.svg" alt="Fotografía pendiente de Dr. Daniel Sega" class="speaker-photo">
+                                    <span class="country-badge" title="Panamá">
+                                        <img src="https://flagcdn.com/w40/pa.png" alt="Panamá">
+                                    </span>
+                                </div>
+                                <div class="speaker-main-info">
+                                    <h3 class="speaker-name">Dr. Daniel Sega</h3>
+                                    <p class="speaker-affiliation"><i class="fas fa-university"></i> Florida State University — Republic of Panama Campus</p>
+                                    <span class="specialty-badge"><i class="fas fa-atom"></i> Dinámica orbital</span>
+                                </div>
+                            </div>
+                            <div class="speaker-card-body">
+                                <div class="talk-info-box">
+                                    <span class="talk-label"><i class="fas fa-chalkboard-teacher"></i> Conferencia:</span>
+                                    <h4 class="talk-title-text">Ondas y anillos planetarios: la onda vertical en el borde del anillo A</h4>
+                                </div>
+                                <p class="speaker-bio">Profesor de Física en Florida State University, Campus de Panamá. Es astrofísico especializado en dinámica y evolución orbital de cuerpos celestes, con trabajo en ondas y deformaciones de anillos planetarios y discos astrofísicos. También mantiene intereses en filosofía de la ciencia y explicación científica en astrofísica.</p>
+                            </div>
+                        </article>
+
+                        <article class="speaker-card">
+                            <div class="speaker-card-header">
+                                <div class="speaker-photo-wrapper">
+                                    <img src="assets/img/personas/foto-pendiente.svg" alt="Fotografía pendiente de Dr. Rodney Delgado-Serrano" class="speaker-photo">
+                                    <span class="country-badge" title="Panamá">
+                                        <img src="https://flagcdn.com/w40/pa.png" alt="Panamá">
+                                    </span>
+                                </div>
+                                <div class="speaker-main-info">
+                                    <h3 class="speaker-name">Dr. Rodney Delgado-Serrano</h3>
+                                    <p class="speaker-affiliation"><i class="fas fa-university"></i> Universidad Tecnológica de Panamá</p>
+                                    <span class="specialty-badge"><i class="fas fa-atom"></i> Astronomía extragaláctica</span>
+                                </div>
+                            </div>
+                            <div class="speaker-card-body">
+                                <div class="talk-info-box">
+                                    <span class="talk-label"><i class="fas fa-chalkboard-teacher"></i> Conferencia:</span>
+                                    <h4 class="talk-title-text">Galaxias y evolución cósmica: cómo reconstruimos la historia del Universo</h4>
+                                </div>
+                                <p class="speaker-bio">Doctor en Astronomía y Astrofísica e investigador de la Universidad Tecnológica de Panamá. Su trayectoria científica se centra en astronomía extragaláctica, cosmología y evolución de galaxias, particularmente en el estudio de su morfología y evolución a lo largo del tiempo cósmico. También ha contribuido al desarrollo de la astronomía profesional y la divulgación científica en Panamá.</p>
                             </div>
                         </article>
 
                     </div>
                 </div>
 
-                <!-- ================= BLOQUE INTERNACIONALES ================= -->
-                <div id="group-internacionales" class="speaker-group">
+                <!-- ============ CONVERSATORIO — Viernes 2 de octubre ============ -->
+                <div id="group-conversatorio" class="speaker-group">
+                    <p class="grupo-actividad"><i class="fas fa-star"></i> Actividad: <strong>Una nueva Perspectiva del Sistema Solar</strong></p>
+
                     <div class="speakers-grid">
 
-                        <!-- Ponente Internacional 1 -->
                         <article class="speaker-card">
                             <div class="speaker-card-header">
                                 <div class="speaker-photo-wrapper">
-                                    <img src="assets/img/logos/universidad-panama.png" alt="Dr. Pablo Martín Weigandt" class="speaker-photo zoomable-img">
-                                    <span class="country-badge" title="Argentina">
-                                        <img src="https://flagcdn.com/w40/ar.png" alt="Argentina">
+                                    <img src="assets/img/personas/foto-pendiente.svg" alt="Fotografía pendiente de Dr. Eduardo Camacho" class="speaker-photo">
+                                    <span class="country-badge" title="Panamá">
+                                        <img src="https://flagcdn.com/w40/pa.png" alt="Panamá">
                                     </span>
                                 </div>
                                 <div class="speaker-main-info">
-                                    <h3 class="speaker-name">Dr. Pablo Martín Weigandt Beckmann</h3>
-                                    <p class="speaker-affiliation"><i class="fas fa-globe"></i> Observatorio de Argentina / Internacional</p>
-                                    <span class="specialty-badge"><i class="fas fa-telescope"></i> Observación Astronómica</span>
+                                    <h3 class="speaker-name">Dr. Eduardo Camacho</h3>
+                                    <p class="speaker-affiliation"><i class="fas fa-university"></i> Geofísica · Universidad de Panamá</p>
+                                    <span class="specialty-badge"><i class="fas fa-atom"></i> Geofísica</span>
+                                </div>
+                            </div>
+                            <div class="speaker-card-body">
+                                <p class="speaker-bio">Participará en el conversatorio desde la perspectiva de la geofísica y del estudio de la Tierra como planeta, aportando elementos para relacionar los procesos terrestres con una visión más amplia del Sistema Solar.</p>
+                            </div>
+                        </article>
+
+                        <article class="speaker-card">
+                            <div class="speaker-card-header">
+                                <div class="speaker-photo-wrapper">
+                                    <img src="assets/img/personas/foto-pendiente.svg" alt="Fotografía pendiente de Dra. Madelaine Rojas" class="speaker-photo">
+                                    <span class="country-badge" title="Panamá">
+                                        <img src="https://flagcdn.com/w40/pa.png" alt="Panamá">
+                                    </span>
+                                </div>
+                                <div class="speaker-main-info">
+                                    <h3 class="speaker-name">Dra. Madelaine Rojas</h3>
+                                    <p class="speaker-affiliation"><i class="fas fa-university"></i> Universidad de Panamá</p>
+                                    <span class="specialty-badge"><i class="fas fa-atom"></i> Astrofísica estelar</span>
+                                </div>
+                            </div>
+                            <div class="speaker-card-body">
+                                <p class="speaker-bio">Participará desde el campo de la astrofísica y el estudio de las estrellas, aportando una perspectiva científica al diálogo sobre nuestro entorno cósmico y la divulgación de las ciencias espaciales.</p>
+                            </div>
+                        </article>
+
+                        <article class="speaker-card">
+                            <div class="speaker-card-header">
+                                <div class="speaker-photo-wrapper">
+                                    <img src="assets/img/personas/foto-pendiente.svg" alt="Fotografía pendiente de Prof. Adams Martínez" class="speaker-photo">
+                                    <span class="country-badge" title="Panamá">
+                                        <img src="https://flagcdn.com/w40/pa.png" alt="Panamá">
+                                    </span>
+                                </div>
+                                <div class="speaker-main-info">
+                                    <h3 class="speaker-name">Prof. Adams Martínez</h3>
+                                    <p class="speaker-affiliation"><i class="fas fa-university"></i> Universidad de Panamá</p>
+                                    <span class="specialty-badge"><i class="fas fa-atom"></i> Enseñanza y divulgación</span>
+                                </div>
+                            </div>
+                            <div class="speaker-card-body">
+                                <p class="speaker-bio">Profesor vinculado a la enseñanza de la Física y a actividades de divulgación científica. Su participación aportará una perspectiva educativa y de comunicación de la astronomía para estudiantes y público general.</p>
+                            </div>
+                        </article>
+
+                        <article class="speaker-card">
+                            <div class="speaker-card-header">
+                                <div class="speaker-photo-wrapper">
+                                    <img src="assets/img/personas/foto-pendiente.svg" alt="Fotografía pendiente de Prof. Yaris Rodríguez" class="speaker-photo">
+                                    <span class="country-badge" title="Panamá">
+                                        <img src="https://flagcdn.com/w40/pa.png" alt="Panamá">
+                                    </span>
+                                </div>
+                                <div class="speaker-main-info">
+                                    <h3 class="speaker-name">Prof. Yaris Rodríguez</h3>
+                                    <p class="speaker-affiliation"><i class="fas fa-university"></i> Universidad de Panamá</p>
+                                    <span class="specialty-badge"><i class="fas fa-atom"></i> Radioastronomía</span>
+                                </div>
+                            </div>
+                            <div class="speaker-card-body">
+                                <p class="speaker-bio">Participará desde su experiencia en astronomía y radioastronomía, contribuyendo al conversatorio con una perspectiva observacional y de divulgación sobre el estudio del Sistema Solar y del universo.</p>
+                            </div>
+                        </article>
+
+                    </div>
+                </div>
+
+                <!-- ============ FORO ESTUDIANTIL — Viernes 2 de octubre ============ -->
+                <div id="group-foro" class="speaker-group">
+                    <p class="grupo-actividad"><i class="fas fa-star"></i> Actividad: <strong>Experiencias de Estudiantes en la Escuela Internacional de Verano de Astronomía Observacional de la UNAM y Caribbean Bridge in Astrophysics (CENCA Bridge)</strong></p>
+
+                    <div class="speakers-grid">
+
+                        <article class="speaker-card">
+                            <div class="speaker-card-header">
+                                <div class="speaker-photo-wrapper">
+                                    <img src="assets/img/personas/foto-pendiente.svg" alt="Fotografía pendiente de Naddia McLean" class="speaker-photo">
+                                    <span class="country-badge" title="Panamá">
+                                        <img src="https://flagcdn.com/w40/pa.png" alt="Panamá">
+                                    </span>
+                                </div>
+                                <div class="speaker-main-info">
+                                    <h3 class="speaker-name">Naddia McLean</h3>
+                                    <p class="speaker-affiliation"><i class="fas fa-university"></i> Estudiante de Física · Universidad de Panamá</p>
+                                    <span class="specialty-badge"><i class="fas fa-atom"></i> Escuela de Verano UNAM</span>
                                 </div>
                             </div>
                             <div class="speaker-card-body">
                                 <div class="talk-info-box">
-                                    <span class="talk-label"><i class="fas fa-chalkboard-teacher"></i> Participación:</span>
-                                    <h4 class="talk-title-text">OAB: tu ventana al cosmos</h4>
+                                    <span class="talk-label"><i class="fas fa-chalkboard-teacher"></i> Programa:</span>
+                                    <h4 class="talk-title-text">Escuela Internacional de Verano de Astronomía Observacional (UNAM)</h4>
                                 </div>
-                                <p class="speaker-bio">
-                                    Especialista en observación astronómica y desarrollo de tecnologías científicas aplicadas al estudio de la bóveda celeste.
-                                </p>
-
-                                <button type="button" class="accordion-btn" onclick="toggleEvidence('ev-spk-int-1', this)">
-                                    <span><i class="fas fa-folder-open"></i> Ver Evidencias / Detalle</span>
-                                    <i class="fas fa-chevron-down arrow-icon"></i>
-                                </button>
-                                <div id="ev-spk-int-1" class="accordion-content">
-                                    <div class="evidence-box">
-                                        <h5><i class="fas fa-file-alt"></i> Material y Recursos</h5>
-                                        <div class="evidence-links">
-                                            <a href="#" target="_blank" class="evidence-link"><i class="fas fa-file-pdf"></i> Presentación (PDF)</a>
-                                        </div>
-                                    </div>
-                                </div>
+                                <p class="speaker-bio">En el foro compartirá qué aprendió durante la experiencia, el tipo de trabajo y actividades de carácter investigativo desarrolladas, cómo fue el proceso de aplicación, los requisitos generales de participación y de qué manera esta experiencia contribuyó a su formación académica.</p>
                             </div>
                         </article>
 
-                        <!-- Ponente Internacional 2 -->
                         <article class="speaker-card">
                             <div class="speaker-card-header">
                                 <div class="speaker-photo-wrapper">
-                                    <img src="assets/img/logos/universidad-panama.png" alt="Mgtr. Galymzhan Baltabay" class="speaker-photo zoomable-img">
-                                    <span class="country-badge" title="Kazajistán">
-                                        <img src="https://flagcdn.com/w40/kz.png" alt="Kazajistán">
+                                    <img src="assets/img/personas/foto-pendiente.svg" alt="Fotografía pendiente de Orlando López" class="speaker-photo">
+                                    <span class="country-badge" title="Panamá">
+                                        <img src="https://flagcdn.com/w40/pa.png" alt="Panamá">
+                                    </span>
+                                </div>
+                                <div class="speaker-main-info">
+                                    <h3 class="speaker-name">Orlando López</h3>
+                                    <p class="speaker-affiliation"><i class="fas fa-university"></i> Estudiante de Física · Universidad de Panamá</p>
+                                    <span class="specialty-badge"><i class="fas fa-atom"></i> Escuela de Verano UNAM</span>
+                                </div>
+                            </div>
+                            <div class="speaker-card-body">
+                                <div class="talk-info-box">
+                                    <span class="talk-label"><i class="fas fa-chalkboard-teacher"></i> Programa:</span>
+                                    <h4 class="talk-title-text">Escuela Internacional de Verano de Astronomía Observacional (UNAM)</h4>
+                                </div>
+                                <p class="speaker-bio">Compartirá su experiencia de formación, las actividades y trabajos realizados, orientaciones para futuros estudiantes interesados en aplicar y el impacto de la escuela de verano en su preparación académica y científica.</p>
+                            </div>
+                        </article>
+
+                        <article class="speaker-card">
+                            <div class="speaker-card-header">
+                                <div class="speaker-photo-wrapper">
+                                    <img src="assets/img/personas/foto-pendiente.svg" alt="Fotografía pendiente de Ivy Janssen" class="speaker-photo">
+                                    <span class="country-badge" title="Panamá">
+                                        <img src="https://flagcdn.com/w40/pa.png" alt="Panamá">
+                                    </span>
+                                </div>
+                                <div class="speaker-main-info">
+                                    <h3 class="speaker-name">Ivy Janssen</h3>
+                                    <p class="speaker-affiliation"><i class="fas fa-university"></i> Estudiante de Física · Universidad de Panamá</p>
+                                    <span class="specialty-badge"><i class="fas fa-atom"></i> CENCA Bridge</span>
+                                </div>
+                            </div>
+                            <div class="speaker-card-body">
+                                <div class="talk-info-box">
+                                    <span class="talk-label"><i class="fas fa-chalkboard-teacher"></i> Programa:</span>
+                                    <h4 class="talk-title-text">Caribbean Bridge in Astrophysics (CENCA Bridge)</h4>
+                                </div>
+                                <p class="speaker-bio">En el foro presentará su experiencia en este programa, las actividades académicas y de formación desarrolladas, aspectos del proceso de participación y el aporte de esta experiencia internacional a su formación en Física y Astrofísica.</p>
+                            </div>
+                        </article>
+
+                    </div>
+                </div>
+
+                <!-- ============ CONFERENCIAS VIRTUALES — Sábado 3 de octubre ============ -->
+                <div id="group-virtuales" class="speaker-group">
+                    <div class="speakers-grid">
+
+                        <article class="speaker-card">
+                            <div class="speaker-card-header">
+                                <div class="speaker-photo-wrapper">
+                                    <img src="assets/img/personas/foto-pendiente.svg" alt="Fotografía pendiente de Mgtr. Augusto Bouras Moreno Sánchez" class="speaker-photo">
+                                    
+                                </div>
+                                <div class="speaker-main-info">
+                                    <h3 class="speaker-name">Mgtr. Augusto Bouras Moreno Sánchez</h3>
+                                    
+                                    <span class="specialty-badge"><i class="fas fa-atom"></i> Fotometría estelar</span>
+                                </div>
+                            </div>
+                            <div class="speaker-card-body">
+                                <div class="talk-info-box">
+                                    <span class="talk-label"><i class="fas fa-chalkboard-teacher"></i> Conferencia:</span>
+                                    <h4 class="talk-title-text">Fotometría avanzada en clústers estelares</h4>
+                                </div>
+                                <p class="speaker-bio">Magíster en Astrofísica y Cosmología. Su trabajo de tesis estuvo relacionado con la fotometría avanzada de cúmulos estelares, incluyendo técnicas de reducción y análisis fotométrico de datos astronómicos.</p>
+                            </div>
+                        </article>
+
+                        <article class="speaker-card">
+                            <div class="speaker-card-header">
+                                <div class="speaker-photo-wrapper">
+                                    <img src="assets/img/personas/foto-pendiente.svg" alt="Fotografía pendiente de Mgtr. Galymzhan Baltabay" class="speaker-photo">
+                                    <span class="country-badge" title="Panamá">
+                                        <img src="https://flagcdn.com/w40/ee.png" alt="Panamá">
                                     </span>
                                 </div>
                                 <div class="speaker-main-info">
                                     <h3 class="speaker-name">Mgtr. Galymzhan Baltabay</h3>
-                                    <p class="speaker-affiliation"><i class="fas fa-globe"></i> Institución Internacional</p>
-                                    <span class="specialty-badge"><i class="fas fa-space-shuttle"></i> Ciencias Espaciales</span>
+                                    <p class="speaker-affiliation"><i class="fas fa-university"></i> Laboratory of High Energy and Computational Physics, NICPB · Estonia</p>
+                                    <span class="specialty-badge"><i class="fas fa-atom"></i> Física de altas energías</span>
                                 </div>
                             </div>
                             <div class="speaker-card-body">
                                 <div class="talk-info-box">
-                                    <span class="talk-label"><i class="fas fa-chalkboard-teacher"></i> Participación:</span>
-                                    <h4 class="talk-title-text">Conferencia Magistral Internacional</h4>
+                                    <span class="talk-label"><i class="fas fa-chalkboard-teacher"></i> Conferencia:</span>
+                                    <h4 class="talk-title-text">Learning Weak Lensing Magnifications</h4>
                                 </div>
-                                <p class="speaker-bio">
-                                    Investigador internacional enfocado en análisis de datos astronómicos y fotometría avanzada en proyectos multinacionales.
-                                </p>
-
-                                <button type="button" class="accordion-btn" onclick="toggleEvidence('ev-spk-int-2', this)">
-                                    <span><i class="fas fa-folder-open"></i> Ver Evidencias / Detalle</span>
-                                    <i class="fas fa-chevron-down arrow-icon"></i>
-                                </button>
-                                <div id="ev-spk-int-2" class="accordion-content">
-                                    <div class="evidence-box">
-                                        <h5><i class="fas fa-file-alt"></i> Material y Recursos</h5>
-                                        <div class="evidence-links">
-                                            <a href="#" target="_blank" class="evidence-link"><i class="fas fa-file-pdf"></i> Presentación (PDF)</a>
-                                        </div>
-                                    </div>
-                                </div>
+                                <p class="speaker-bio">Estudiante doctoral vinculado al Laboratory of High Energy and Computational Physics del National Institute of Chemical Physics and Biophysics (NICPB), Estonia. Sus intereses se sitúan en física de altas energías, cosmología y física del Universo temprano.</p>
                             </div>
                         </article>
-                        
-                        <!-- Ponente Internacional 3 -->
+
                         <article class="speaker-card">
                             <div class="speaker-card-header">
                                 <div class="speaker-photo-wrapper">
-                                    <img src="assets/img/logos/universidad-panama.png" alt="Mgtr. Galymzhan Baltabay" class="speaker-photo zoomable-img">
-                                    <span class="country-badge" title="Kazajistán">
-                                        <img src="https://flagcdn.com/w40/kz.png" alt="Kazajistán">
+                                    <img src="assets/img/personas/foto-pendiente.svg" alt="Fotografía pendiente de Mgtr. Shayan Fathikoohi" class="speaker-photo">
+                                    <span class="country-badge" title="Panamá">
+                                        <img src="https://flagcdn.com/w40/it.png" alt="Panamá">
                                     </span>
                                 </div>
                                 <div class="speaker-main-info">
-                                    <h3 class="speaker-name">Mgtr. Augusto Bouras </h3>
-                                    <p class="speaker-affiliation"><i class="fas fa-globe"></i> Institución Internacional</p>
-                                    <span class="specialty-badge"><i class="fas fa-space-shuttle"></i> Ciencias Espaciales</span>
+                                    <h3 class="speaker-name">Mgtr. Shayan Fathikoohi</h3>
+                                    <p class="speaker-affiliation"><i class="fas fa-university"></i> University of Padova · Italia</p>
+                                    <span class="specialty-badge"><i class="fas fa-atom"></i> Cosmología teórica</span>
                                 </div>
                             </div>
                             <div class="speaker-card-body">
                                 <div class="talk-info-box">
-                                    <span class="talk-label"><i class="fas fa-chalkboard-teacher"></i> Participación:</span>
-                                    <h4 class="talk-title-text">Conferencia: Fotometría avanzada en clústers estelares </h4>
+                                    <span class="talk-label"><i class="fas fa-chalkboard-teacher"></i> Conferencia:</span>
+                                    <h4 class="talk-title-text">Alternative Initial States for Inflationary Perturbations</h4>
                                 </div>
-                                <p class="speaker-bio">
-                                   Por Completar...
-                                </p>
-
-                                <button type="button" class="accordion-btn" onclick="toggleEvidence('ev-spk-int-2', this)">
-                                    <span><i class="fas fa-folder-open"></i> Ver Evidencias / Detalle</span>
-                                    <i class="fas fa-chevron-down arrow-icon"></i>
-                                </button>
-                                <div id="ev-spk-int-2" class="accordion-content">
-                                    <div class="evidence-box">
-                                        <h5><i class="fas fa-file-alt"></i> Material y Recursos</h5>
-                                        <div class="evidence-links">
-                                            <a href="#" target="_blank" class="evidence-link"><i class="fas fa-file-pdf"></i> Presentación (PDF)</a>
-                                        </div>
-                                    </div>
-                                </div>
+                                <p class="speaker-bio">Estudiante doctoral vinculado a la University of Padova, con trabajo en cosmología teórica y física del Universo temprano.</p>
                             </div>
                         </article>
-                        
-                        <!-- Ponente Internacional 4 -->
+
                         <article class="speaker-card">
                             <div class="speaker-card-header">
                                 <div class="speaker-photo-wrapper">
-                                    <img src="assets/img/logos/universidad-panama.png" alt="Mgtr. Galymzhan Baltabay" class="speaker-photo zoomable-img">
-                                    <span class="country-badge" title="Kazajistán">
-                                        <img src="https://flagcdn.com/w40/kz.png" alt="Kazajistán">
+                                    <img src="assets/img/personas/foto-pendiente.svg" alt="Fotografía pendiente de Dr. Marcel Popescu" class="speaker-photo">
+                                    <span class="country-badge" title="Panamá">
+                                        <img src="https://flagcdn.com/w40/ro.png" alt="Panamá">
                                     </span>
                                 </div>
                                 <div class="speaker-main-info">
-                                    <h3 class="speaker-name">Mgtr. Shayan fathikoohi</h3>
-                                    <p class="speaker-affiliation"><i class="fas fa-globe"></i> Institución Internacional</p>
-                                    <span class="specialty-badge"><i class="fas fa-space-shuttle"></i> Ciencias Espaciales</span>
+                                    <h3 class="speaker-name">Dr. Marcel Popescu</h3>
+                                    <p class="speaker-affiliation"><i class="fas fa-university"></i> Institute of Space Science · Rumanía</p>
+                                    <span class="specialty-badge"><i class="fas fa-atom"></i> Defensa planetaria</span>
                                 </div>
                             </div>
                             <div class="speaker-card-body">
                                 <div class="talk-info-box">
-                                    <span class="talk-label"><i class="fas fa-chalkboard-teacher"></i> Participación:</span>
-                                    <h4 class="talk-title-text">Conferencia: Alternative Initial states for inflationary perturbations</h4>
+                                    <span class="talk-label"><i class="fas fa-chalkboard-teacher"></i> Conferencia:</span>
+                                    <h4 class="talk-title-text">Near-Earth Asteroids: From Ground-Based Observations to Space Exploration and Planetary Defence</h4>
                                 </div>
-                                <p class="speaker-bio">
-                                   Por Completar...
-                                </p>
-
-                                <button type="button" class="accordion-btn" onclick="toggleEvidence('ev-spk-int-2', this)">
-                                    <span><i class="fas fa-folder-open"></i> Ver Evidencias / Detalle</span>
-                                    <i class="fas fa-chevron-down arrow-icon"></i>
-                                </button>
-                                <div id="ev-spk-int-2" class="accordion-content">
-                                    <div class="evidence-box">
-                                        <h5><i class="fas fa-file-alt"></i> Material y Recursos</h5>
-                                        <div class="evidence-links">
-                                            <a href="#" target="_blank" class="evidence-link"><i class="fas fa-file-pdf"></i> Presentación (PDF)</a>
-                                        </div>
-                                    </div>
-                                </div>
+                                <p class="speaker-bio">Investigador en astronomía dedicado al estudio y caracterización de asteroides cercanos a la Tierra, observaciones terrestres, espectroscopía y defensa planetaria. Su trabajo conecta observaciones desde Tierra con exploración espacial y estudios de defensa planetaria.</p>
                             </div>
                         </article>
 
-                        <!-- Ponente Internacional 2 -->
                         <article class="speaker-card">
                             <div class="speaker-card-header">
                                 <div class="speaker-photo-wrapper">
-                                    <img src="assets/img/logos/universidad-panama.png" alt="Mgtr. Galymzhan Baltabay" class="speaker-photo zoomable-img">
-                                    <span class="country-badge" title="Kazajistán">
-                                        <img src="https://flagcdn.com/w40/kz.png" alt="Kazajistán">
-                                    </span>
-                                </div>
-                                <div class="speaker-main-info">
-                                    <h3 class="speaker-name">PhD. Marcel Popescu</h3>
-                                    <p class="speaker-affiliation"><i class="fas fa-globe"></i> Institución Internacional</p>
-                                    <span class="specialty-badge"><i class="fas fa-space-shuttle"></i> Ciencias Espaciales</span>
-                                </div>
-                            </div>
-                            <div class="speaker-card-body">
-                                <div class="talk-info-box">
-                                    <span class="talk-label"><i class="fas fa-chalkboard-teacher"></i> Participación:</span>
-                                    <h4 class="talk-title-text">Conferencia:Near-Earth Asteroids: From Ground-Based Observations to Space </h4>
-                                </div>
-                                <p class="speaker-bio">
-                                    Investigador internacional enfocado en análisis de datos astronómicos y fotometría avanzada en proyectos multinacionales.
-                                </p>
-
-                                <button type="button" class="accordion-btn" onclick="toggleEvidence('ev-spk-int-2', this)">
-                                    <span><i class="fas fa-folder-open"></i> Ver Evidencias / Detalle</span>
-                                    <i class="fas fa-chevron-down arrow-icon"></i>
-                                </button>
-                                <div id="ev-spk-int-2" class="accordion-content">
-                                    <div class="evidence-box">
-                                        <h5><i class="fas fa-file-alt"></i> Material y Recursos</h5>
-                                        <div class="evidence-links">
-                                            <a href="#" target="_blank" class="evidence-link"><i class="fas fa-file-pdf"></i> Presentación (PDF)</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </article>
-
-                        <!-- Ponente Internacional 2 -->
-                        <article class="speaker-card">
-                            <div class="speaker-card-header">
-                                <div class="speaker-photo-wrapper">
-                                    <img src="assets/img/logos/universidad-panama.png" alt="Mgtr. Galymzhan Baltabay" class="speaker-photo zoomable-img">
-                                    <span class="country-badge" title="Kazajistán">
-                                        <img src="https://flagcdn.com/w40/kz.png" alt="Kazajistán">
+                                    <img src="assets/img/personas/foto-pendiente.svg" alt="Fotografía pendiente de Mgtr. Ivan Stankovich" class="speaker-photo">
+                                    <span class="country-badge" title="Panamá">
+                                        <img src="https://flagcdn.com/w40/at.png" alt="Panamá">
                                     </span>
                                 </div>
                                 <div class="speaker-main-info">
                                     <h3 class="speaker-name">Mgtr. Ivan Stankovich</h3>
-                                    <p class="speaker-affiliation"><i class="fas fa-globe"></i> Institución Internacional</p>
-                                    <span class="specialty-badge"><i class="fas fa-space-shuttle"></i> Ciencias Espaciales</span>
+                                    <p class="speaker-affiliation"><i class="fas fa-university"></i> University of Vienna · Austria</p>
+                                    <span class="specialty-badge"><i class="fas fa-atom"></i> Exoplanetas</span>
                                 </div>
                             </div>
                             <div class="speaker-card-body">
                                 <div class="talk-info-box">
-                                    <span class="talk-label"><i class="fas fa-chalkboard-teacher"></i> Participación:</span>
-                                    <h4 class="talk-title-text">Conferencia:What We Don’t Know About Exoplanets Atmospheres Exploration and Planetary Defence  </h4>
+                                    <span class="talk-label"><i class="fas fa-chalkboard-teacher"></i> Conferencia:</span>
+                                    <h4 class="talk-title-text">What We Don’t Know About Exoplanet Atmospheres</h4>
                                 </div>
-                                <p class="speaker-bio">
-                                  Por Completar...
-                                </p>
-
-                                <button type="button" class="accordion-btn" onclick="toggleEvidence('ev-spk-int-2', this)">
-                                    <span><i class="fas fa-folder-open"></i> Ver Evidencias / Detalle</span>
-                                    <i class="fas fa-chevron-down arrow-icon"></i>
-                                </button>
-                                <div id="ev-spk-int-2" class="accordion-content">
-                                    <div class="evidence-box">
-                                        <h5><i class="fas fa-file-alt"></i> Material y Recursos</h5>
-                                        <div class="evidence-links">
-                                            <a href="#" target="_blank" class="evidence-link"><i class="fas fa-file-pdf"></i> Presentación (PDF)</a>
-                                        </div>
-                                    </div>
-                                </div>
+                                <p class="speaker-bio">Estudiante doctoral vinculado a la University of Vienna, con intereses en exoplanetas y caracterización de sus atmósferas.</p>
                             </div>
                         </article>
 
+                    </div>
+                </div>
 
+                <!-- ============ ASTROFOTOGRAFÍA — Domingo 4 de octubre ============ -->
+                <div id="group-astrofotografia" class="speaker-group">
+                    <div class="speakers-grid">
 
+                        <article class="speaker-card">
+                            <div class="speaker-card-header">
+                                <div class="speaker-photo-wrapper">
+                                    <img src="assets/img/personas/foto-pendiente.svg" alt="Fotografía pendiente de Didhier Montenegro" class="speaker-photo">
+                                    <span class="country-badge" title="Panamá">
+                                        <img src="https://flagcdn.com/w40/pa.png" alt="Panamá">
+                                    </span>
+                                </div>
+                                <div class="speaker-main-info">
+                                    <h3 class="speaker-name">Didhier Montenegro</h3>
+                                    <p class="speaker-affiliation"><i class="fas fa-location-dot"></i> Panamá</p>
+                                    <span class="specialty-badge"><i class="fas fa-camera"></i> Director y creador de FOBOS MEDIA</span>
+                                </div>
+                            </div>
+                            <div class="speaker-card-body">
+                                <div class="talk-info-box">
+                                    <span class="talk-label"><i class="fas fa-diagram-project"></i> Proyecto:</span>
+                                    <h4 class="talk-title-text">FOBOS MEDIA</h4>
+                                </div>
+                                <!-- Enlace pendiente: el documento del Comite no incluye la URL -->
+                                <a href="#" class="proyecto-btn"><i class="fas fa-arrow-up-right-from-square"></i> Conoce su proyecto</a>
+                            </div>
+                        </article>
+
+                        <article class="speaker-card">
+                            <div class="speaker-card-header">
+                                <div class="speaker-photo-wrapper">
+                                    <img src="assets/img/personas/foto-pendiente.svg" alt="Fotografía pendiente de Francisco Núñez P." class="speaker-photo">
+                                    <span class="country-badge" title="Chile">
+                                        <img src="https://flagcdn.com/w40/cl.png" alt="Chile">
+                                    </span>
+                                </div>
+                                <div class="speaker-main-info">
+                                    <h3 class="speaker-name">Francisco Núñez P.</h3>
+                                    <p class="speaker-affiliation"><i class="fas fa-location-dot"></i> Chile</p>
+                                    <span class="specialty-badge"><i class="fas fa-camera"></i> Director, Founder &amp; CEO de AstroFotografíaChile – AFCH</span>
+                                </div>
+                            </div>
+                            <div class="speaker-card-body">
+                                <div class="talk-info-box">
+                                    <span class="talk-label"><i class="fas fa-diagram-project"></i> Proyecto:</span>
+                                    <h4 class="talk-title-text">AstroFotografíaChile – AFCH</h4>
+                                </div>
+                                <!-- Enlace pendiente: el documento del Comite no incluye la URL -->
+                                <a href="#" class="proyecto-btn"><i class="fas fa-arrow-up-right-from-square"></i> Conoce su proyecto</a>
+                            </div>
+                        </article>
+
+                        <article class="speaker-card">
+                            <div class="speaker-card-header">
+                                <div class="speaker-photo-wrapper">
+                                    <img src="assets/img/personas/foto-pendiente.svg" alt="Fotografía pendiente de Jesús Mario Vargas" class="speaker-photo">
+                                    <span class="country-badge" title="Colombia">
+                                        <img src="https://flagcdn.com/w40/co.png" alt="Colombia">
+                                    </span>
+                                </div>
+                                <div class="speaker-main-info">
+                                    <h3 class="speaker-name">Jesús Mario Vargas</h3>
+                                    <p class="speaker-affiliation"><i class="fas fa-location-dot"></i> Colombia</p>
+                                    <span class="specialty-badge"><i class="fas fa-camera"></i> Director y creador de Orión Campamento</span>
+                                </div>
+                            </div>
+                            <div class="speaker-card-body">
+                                <div class="talk-info-box">
+                                    <span class="talk-label"><i class="fas fa-diagram-project"></i> Proyecto:</span>
+                                    <h4 class="talk-title-text">Orión Campamento Interestelar</h4>
+                                </div>
+                                <!-- Enlace pendiente: el documento del Comite no incluye la URL -->
+                                <a href="#" class="proyecto-btn"><i class="fas fa-arrow-up-right-from-square"></i> Conoce su proyecto</a>
+                            </div>
+                        </article>
 
                     </div>
                 </div>

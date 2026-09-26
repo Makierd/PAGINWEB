@@ -1,0 +1,10 @@
+Fotografías de conferencistas y participantes.
+
+Mientras no se reciba la fotografía oficial de una persona, su tarjeta
+usa foto-pendiente.svg como marcador. Para colocar una foto real:
+
+  1. Guardar la imagen aquí (recorte cuadrado, idealmente 400x400).
+  2. En Conferencia.html, cambiar el src de esa tarjeta por el archivo.
+
+Indicación del Comité Organizador: si falta una fotografía o una reseña
+oficial, no inventar información; dejar el espacio preparado.
